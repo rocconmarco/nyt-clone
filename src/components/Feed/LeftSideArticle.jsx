@@ -1,28 +1,57 @@
-import React from 'react'
-import { Flex, Box, Image, Text, Heading } from '@chakra-ui/react'
-import article1 from "../../img/article1-img.webp";
+import React from "react";
+import {
+  Flex,
+  Box,
+  Image,
+  Text,
+  Heading,
+  Spinner,
+  Alert,
+  AlertIcon,
+  Container,
+} from "@chakra-ui/react";
+import imageNotFound from "../../img/image-not-found.png";
+import useMostPopularArticles from "../../hooks/useMostPopularArticles";
+import ArticleCard from "./ArticleCard";
 
 const LeftSideArticle = () => {
-  return (
-    <Flex mb={5} paddingBottom={3} borderBottom={'1px solid lightgray'}>
-        <Box maxW={'40%'}>
-          <Heading as={"h3"} size={"lg"}>
-            Questo è un titolo lungo
-          </Heading>
-          <Text fontSize={"md"}>
-            Questo è l'abstract Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Quos nesciunt neque possimus quaerat illum rerum
-            ratione! Sunt cupiditate reiciendis quam impedit qui, inventore
-            voluptatem iste enim sapiente rerum placeat quae.
-          </Text>
-          <Text fontSize={"sm"}>Questo è il tempo di lettura</Text>
-        </Box>
-        <Box maxW={'60%'}>
-          <Image src={article1} />
-          <Text fontSize={"sm"}>Questi sono i credits</Text>
-        </Box>
-      </Flex>
-  )
-}
+  const { articles, loading, error } = useMostPopularArticles(1);
+  if (loading) return <Spinner size="xl" />;
+  if (error)
+    return (
+      <Alert status="error">
+        <AlertIcon />
+        {error.message}
+      </Alert>
+    );
 
-export default LeftSideArticle
+  return (
+    <>
+      {articles.map((article) => {
+        const imageUrl =
+          article.media &&
+          article.media[0] &&
+          article.media[0]["media-metadata"] &&
+          article.media[0]["media-metadata"][2]
+            ? article.media[0]["media-metadata"][2].url
+            : imageNotFound;
+
+        const imageCredits =
+          article.media && article.media[0]
+            ? article.media[0].copyright
+            : '';
+
+        return (
+          <ArticleCard
+            key={article.id}
+            article={article}
+            imageUrl={imageUrl}
+            imageCredits={imageCredits}
+          />
+        );
+      })}
+    </>
+  );
+};
+
+export default LeftSideArticle;

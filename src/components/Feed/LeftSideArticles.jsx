@@ -7,7 +7,6 @@ const LeftSideArticles = () => {
   return (
     <Flex flex={2} flexDir={'column'} mr={{base: 0, md: 4 }}>
       <LeftSideArticle />
-      <LeftSideArticle />
     </Flex>
   );
 };

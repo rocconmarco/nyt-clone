@@ -1,23 +1,35 @@
 import React from 'react'
-import { Flex, Box, Image, Text, Heading } from '@chakra-ui/react'
+import { Spinner, Alert, AlertIcon } from '@chakra-ui/react'
 import article2 from "../../img/article2-img.webp";
+import BookCard from './BookCard';
+import useMostPopularBooks from '../../hooks/useMostPopularBooks';
 
 const RightSideArticle = () => {
-  return (
-    <Flex mb={5} flexDir={"column"} paddingBottom={3} borderBottom={'1px solid lightgray'}>
-        <Box>
-          <Image src={article2} />
-          <Text fontSize={"sm"}>Questi sono i credits</Text>
-        </Box>
-        <Box>
-          <Heading as={"h3"} size={"lg"}>
-            Questo è un titolo
-          </Heading>
-          <Text fontSize={"md"}>Questo è l'abstract</Text>
-          <Text fontSize={"sm"}>Questo è il tempo di lettura</Text>
-        </Box>
-      </Flex>
-  )
-}
+  const { books, loading, error } = useMostPopularBooks('hardcover-fiction');
+  if (loading) return <Spinner size="xl" />;
+  if (error)
+    return (
+      <Alert status="error">
+        <AlertIcon />
+        {error.message}
+      </Alert>
+    );
 
-export default RightSideArticle
+  return (
+    <>
+      {books.map((book) => {
+        return (
+          <BookCard
+            key={book.primary_isbn13}
+            title={book.title}
+            description={book.description}
+            bookImage={book.book_image}
+            contributor={book.contributor}
+          />
+        );
+      })}
+    </>
+  );
+};
+
+export default RightSideArticle;
