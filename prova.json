@@ -1,0 +1,1225 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2024 The New York Times Company.  All Rights Reserved.",
+  "num_results": 20,
+  "results": [
+    {
+      "uri": "nyt://article/522c5e41-6b95-5a06-9094-021d3f3fa990",
+      "url": "https://www.nytimes.com/2024/06/20/science/ancient-egyptian-beer-yeast.html",
+      "id": 100000009514375,
+      "asset_id": 100000009514375,
+      "source": "New York Times",
+      "published_date": "2024-06-20",
+      "updated": "2024-06-20 14:26:35",
+      "section": "Science",
+      "subsection": "",
+      "nytdsection": "science",
+      "adx_keywords": "Beer;Cooking and Cookbooks;Microbiology;Archaeology and Anthropology;Egyptian Civilization;Yeast;Blackley, Seamus",
+      "column": null,
+      "byline": "By Alexander Nazaryan",
+      "type": "Article",
+      "title": "How to Make 3,000-Year-Old Beer",
+      "abstract": "An amateur brewer in Utah gathered rare figs and a strain of yeast from 850 B.C. to make a sour, fruity concoction inspired by ancient Egyptian recipes.",
+      "des_facet": [
+        "Beer",
+        "Cooking and Cookbooks",
+        "Microbiology",
+        "Archaeology and Anthropology",
+        "Egyptian Civilization",
+        "Yeast"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Blackley, Seamus"
+      ],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Kim Raff for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/multimedia/20SCI-ancient-beer-05-vhbc/20SCI-ancient-beer-05-vhbc-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/multimedia/20SCI-ancient-beer-05-vhbc/20SCI-ancient-beer-05-vhbc-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/multimedia/20SCI-ancient-beer-05-vhbc/20SCI-ancient-beer-05-vhbc-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/8fb256e4-a7a3-57b4-b0dd-c2c74df3b5e8",
+      "url": "https://www.nytimes.com/2024/06/18/opinion/holocaust-israel-palestinians-hamas.html",
+      "id": 100000009496058,
+      "asset_id": 100000009496058,
+      "source": "New York Times",
+      "published_date": "2024-06-18",
+      "updated": "2024-06-23 22:53:25",
+      "section": "Opinion",
+      "subsection": "",
+      "nytdsection": "opinion",
+      "adx_keywords": "Israel-Gaza War (2023- );Holocaust and the Nazi Era;Palestinians;Pro-Palestinian Campus Protests (2023- );Jews and Judaism;War Crimes, Genocide and Crimes Against Humanity;Netanyahu, Benjamin;Hamas;Gaza Strip;Israel",
+      "column": null,
+      "byline": "By Jonathan Dekel-Chen",
+      "type": "Article",
+      "title": "An Israeli Hostage’s Parent: This Is Not the Holocaust",
+      "abstract": "Invoking Nazis and pogroms in discussing the Hamas attacks is wrong and offensive and helps the Israeli government avoid responsibility for its failures.",
+      "des_facet": [
+        "Israel-Gaza War (2023- )",
+        "Holocaust and the Nazi Era",
+        "Palestinians",
+        "Pro-Palestinian Campus Protests (2023- )",
+        "Jews and Judaism",
+        "War Crimes, Genocide and Crimes Against Humanity"
+      ],
+      "org_facet": [
+        "Hamas"
+      ],
+      "per_facet": [
+        "Netanyahu, Benjamin"
+      ],
+      "geo_facet": [
+        "Gaza Strip",
+        "Israel"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Jack Smyth",
+          "approved_for_syndication": 0,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/24/opinion/18dekelchen/18dekelchen-thumbStandard-v4.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/24/opinion/18dekelchen/18dekelchen-mediumThreeByTwo210-v3.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/24/opinion/18dekelchen/18dekelchen-mediumThreeByTwo440-v3.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/249cecbf-8074-51a2-a7cb-c8d1b30163d3",
+      "url": "https://www.nytimes.com/2024/06/17/well/live/productivity-time-management-skills-books.html",
+      "id": 100000009478150,
+      "asset_id": 100000009478150,
+      "source": "New York Times",
+      "published_date": "2024-06-17",
+      "updated": "2024-06-18 06:02:04",
+      "section": "Well",
+      "subsection": "Live",
+      "nytdsection": "well",
+      "adx_keywords": "Books and Literature;Content Type: Service;Productivity;Psychology and Psychologists;Research;Biorhythms",
+      "column": null,
+      "byline": "By Jancee Dunn",
+      "type": "Article",
+      "title": "8 Productivity Books Time-Management Experts Actually Use",
+      "abstract": "These titles can help you achieve more with less stress.",
+      "des_facet": [
+        "Books and Literature",
+        "Content Type: Service",
+        "Productivity",
+        "Psychology and Psychologists",
+        "Research",
+        "Biorhythms"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Monica Garwood",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/05/30/well/30WELL-PRODUCTIVITY-ROUNDUP/30WELL-PRODUCTIVITY-ROUNDUP-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/05/30/well/30WELL-PRODUCTIVITY-ROUNDUP/30WELL-PRODUCTIVITY-ROUNDUP-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/05/30/well/30WELL-PRODUCTIVITY-ROUNDUP/30WELL-PRODUCTIVITY-ROUNDUP-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/cee1bb4e-c833-5449-b969-1ee42fa67695",
+      "url": "https://www.nytimes.com/2024/06/12/well/move/core-ab-workout-20-minutes.html",
+      "id": 100000009410256,
+      "asset_id": 100000009410256,
+      "source": "New York Times",
+      "published_date": "2024-06-12",
+      "updated": "2024-06-12 05:00:38",
+      "section": "Well",
+      "subsection": "Move",
+      "nytdsection": "well",
+      "adx_keywords": "Exercise;Longevity;Muscles",
+      "column": null,
+      "byline": "By Jenny Marder",
+      "type": "Article",
+      "title": "A 20-Minute Core Workout for Strength and Stability",
+      "abstract": "This series of exercises focuses on important muscles in the legs and torso we use every day. No equipment (and very little space) necessary.",
+      "des_facet": [
+        "Exercise",
+        "Longevity",
+        "Muscles"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Gritchelle Fallesgon for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/04/multimedia/SHORT-CORE-WORKOUT2-zhgt/SHORT-CORE-WORKOUT2-zhgt-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/04/multimedia/SHORT-CORE-WORKOUT2-zhgt/SHORT-CORE-WORKOUT2-zhgt-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/04/multimedia/SHORT-CORE-WORKOUT2-zhgt/SHORT-CORE-WORKOUT2-zhgt-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://interactive/a27b07d3-a144-5eb5-acd0-237af51bb48a",
+      "url": "https://www.nytimes.com/interactive/2024/06/20/travel/things-to-do-portland-maine.html",
+      "id": 100000009480177,
+      "asset_id": 100000009480177,
+      "source": "New York Times",
+      "published_date": "2024-06-20",
+      "updated": "2024-06-23 12:15:36",
+      "section": "Travel",
+      "subsection": "",
+      "nytdsection": "travel",
+      "adx_keywords": "Travel and Vacations;Hotels and Travel Lodgings;Bars and Nightclubs;Restaurants;Museums;Portland (Me);Peaks Island (Me)",
+      "column": null,
+      "byline": "By Chelsea Conaboy",
+      "type": "Interactive",
+      "title": "36 Hours in Portland, Maine",
+      "abstract": "Find your favorite lobster shack, take a ferry to an island and linger in bookstores over a weekend in this classic New England destination.",
+      "des_facet": [
+        "Travel and Vacations",
+        "Hotels and Travel Lodgings",
+        "Bars and Nightclubs",
+        "Restaurants",
+        "Museums"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [
+        "Portland (Me)",
+        "Peaks Island (Me)"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "",
+          "caption": "",
+          "copyright": "",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/multimedia/20hours-portland-gbvq/20hours-portland-gbvq-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/multimedia/20hours-portland-gbvq/20hours-portland-gbvq-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/multimedia/20hours-portland-gbvq/20hours-portland-gbvq-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/94af745f-f3ec-54d8-9692-9b900b4df792",
+      "url": "https://www.nytimes.com/2024/06/18/sports/willie-mays-dead.html",
+      "id": 100000006678333,
+      "asset_id": 100000006678333,
+      "source": "New York Times",
+      "published_date": "2024-06-18",
+      "updated": "2024-06-21 11:50:58",
+      "section": "Sports",
+      "subsection": "",
+      "nytdsection": "sports",
+      "adx_keywords": "Deaths (Obituaries);Baseball;Halls of Fame;Black People;Mays, Willie;New York Giants (Baseball);San Francisco Giants;Negro League;Alabama",
+      "column": null,
+      "byline": "By Richard Goldstein",
+      "type": "Article",
+      "title": "Willie Mays, Baseball’s Electrifying Player of Power and Grace, Is Dead at 93",
+      "abstract": "Mays, the Say Hey Kid, was the game’s exuberant embodiment of the complete player. Some say he was the greatest of them all.",
+      "des_facet": [
+        "Deaths (Obituaries)",
+        "Baseball",
+        "Halls of Fame",
+        "Black People"
+      ],
+      "org_facet": [
+        "New York Giants (Baseball)",
+        "San Francisco Giants",
+        "Negro League"
+      ],
+      "per_facet": [
+        "Mays, Willie"
+      ],
+      "geo_facet": [
+        "Alabama"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Willie Mays in 1969 at Yankee Stadium for an exhibition game. In 22 seasons, he had 660 home runs, a .301 batting average and 3,293 hits.",
+          "copyright": "Ernie Sisto/The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2013/01/11/sports/00mays-obit1/00mays-obit1-thumbStandard-v2.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2013/01/11/sports/00mays-obit1/00mays-obit1-mediumThreeByTwo210-v2.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2013/01/11/sports/00mays-obit1/00mays-obit1-mediumThreeByTwo440-v2.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/493541d4-16b4-5aab-90aa-515f6ff5d3f0",
+      "url": "https://www.nytimes.com/2024/06/18/opinion/capitalism-inflation.html",
+      "id": 100000009527899,
+      "asset_id": 100000009527899,
+      "source": "New York Times",
+      "published_date": "2024-06-18",
+      "updated": "2024-06-19 22:21:28",
+      "section": "Opinion",
+      "subsection": "",
+      "nytdsection": "opinion",
+      "adx_keywords": "Income Inequality;Inflation (Economics);United States Economy;Capitalism (Theory and Philosophy);Credit and Debt;Banking and Financial Institutions;Labor and Jobs;Real Estate and Housing (Residential);Mortgages;Sharma, Ruchir;United States",
+      "column": null,
+      "byline": "By Bret Stephens",
+      "type": "Article",
+      "title": "How Capitalism Went Off the Rails",
+      "abstract": "Easy money destroyed the basis for productive, competitive markets.",
+      "des_facet": [
+        "Income Inequality",
+        "Inflation (Economics)",
+        "United States Economy",
+        "Capitalism (Theory and Philosophy)",
+        "Credit and Debt",
+        "Banking and Financial Institutions",
+        "Labor and Jobs",
+        "Real Estate and Housing (Residential)",
+        "Mortgages"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Sharma, Ruchir"
+      ],
+      "geo_facet": [
+        "United States"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Yasu & Junko/Trunk Archive",
+          "approved_for_syndication": 0,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/opinion/18stephens1/18stephens1-thumbStandard-v2.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/opinion/18stephens1/18stephens1-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/opinion/18stephens1/18stephens1-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/4b8e2751-75f2-5b42-b5a1-d20b397ea11a",
+      "url": "https://www.nytimes.com/2024/06/15/style/baby-name-meme-tiktok.html",
+      "id": 100000009517687,
+      "asset_id": 100000009517687,
+      "source": "New York Times",
+      "published_date": "2024-06-15",
+      "updated": "2024-06-22 10:11:38",
+      "section": "Style",
+      "subsection": "",
+      "nytdsection": "style",
+      "adx_keywords": "Names, Personal;Babies and Infants;Social Media;TikTok (ByteDance)",
+      "column": null,
+      "byline": "By Madison Malone Kircher",
+      "type": "Article",
+      "title": "Have We Reached Peak Baby Name?",
+      "abstract": "Tank? Afternoon? Flick? Orca?",
+      "des_facet": [
+        "Names, Personal",
+        "Babies and Infants",
+        "Social Media"
+      ],
+      "org_facet": [
+        "TikTok (ByteDance)"
+      ],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "In 2024, almost anything can be a name, especially on TikTok.",
+          "copyright": "Jamie Grill/Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/15/multimedia/15BABYNAME-MEME1-fqcw/15BABYNAME-MEME1-fqcw-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/15/multimedia/15BABYNAME-MEME1-fqcw/15BABYNAME-MEME1-fqcw-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/15/multimedia/15BABYNAME-MEME1-fqcw/15BABYNAME-MEME1-fqcw-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/deca96de-442a-5efb-93fa-2f07c61cbbce",
+      "url": "https://www.nytimes.com/2024/06/20/business/retirement/retire-advice-life-tips.html",
+      "id": 100000009506013,
+      "asset_id": 100000009506013,
+      "source": "New York Times",
+      "published_date": "2024-06-20",
+      "updated": "2024-06-22 21:11:12",
+      "section": "Business",
+      "subsection": "Retirement",
+      "nytdsection": "business",
+      "adx_keywords": "Retirement;Labor and Jobs;Volunteers and Community Service;Workplace Environment;Elderly;Pensions and Retirement Plans;Retirement Communities and Assisted Living",
+      "column": null,
+      "byline": "By The New York Times",
+      "type": "Article",
+      "title": "What Does Retirement Really Mean?",
+      "abstract": "We asked readers to submit their stories of retirement — to share their experiences, as well as their advice.",
+      "des_facet": [
+        "Retirement",
+        "Labor and Jobs",
+        "Volunteers and Community Service",
+        "Workplace Environment",
+        "Elderly",
+        "Pensions and Retirement Plans",
+        "Retirement Communities and Assisted Living"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/b6383c9f-3ab5-5ac7-90fb-55af565ee6e1",
+      "url": "https://www.nytimes.com/2024/06/14/magazine/parkinsons-smell-disease-detection.html",
+      "id": 100000009508386,
+      "asset_id": 100000009508386,
+      "source": "New York Times",
+      "published_date": "2024-06-14",
+      "updated": "2024-06-19 12:42:02",
+      "section": "Magazine",
+      "subsection": "",
+      "nytdsection": "magazine",
+      "adx_keywords": "Parkinson's Disease;Smells and Odors;Smell (Olfaction);Tests (Medical);Research;Content Type: Personal Profile",
+      "column": null,
+      "byline": "By Scott Sayare",
+      "type": "Article",
+      "title": "The Woman Who Could Smell Parkinson’s",
+      "abstract": "She first noticed the scent on her husband. Now her abilities are helping unlock new research in early disease detection.",
+      "des_facet": [
+        "Parkinson's Disease",
+        "Smells and Odors",
+        "Smell (Olfaction)",
+        "Tests (Medical)",
+        "Research",
+        "Content Type: Personal Profile"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Joy Milne, a supersmeller who is also a co-author of several papers about Parkinson’s disease.",
+          "copyright": "Sebastian Nevols for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/16/magazine/16mag-parkinnson/16mag-parkinnson-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/16/magazine/16mag-parkinnson/16mag-parkinnson-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/16/magazine/16mag-parkinnson/16mag-parkinnson-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/4a99af0a-dbe6-56ea-8706-dd179c132107",
+      "url": "https://www.nytimes.com/2024/06/21/realestate/harlem-bailey-mansion-renovation.html",
+      "id": 100000009300735,
+      "asset_id": 100000009300735,
+      "source": "New York Times",
+      "published_date": "2024-06-21",
+      "updated": "2024-06-22 09:47:21",
+      "section": "Real Estate",
+      "subsection": "",
+      "nytdsection": "real estate",
+      "adx_keywords": "Real Estate and Housing (Residential);Restoration and Renovation;Interior Design and Furnishings;Architecture;Historic Buildings and Sites;Content Type: Personal Profile;Bailey, James A;Harlem (Manhattan, NY)",
+      "column": null,
+      "byline": "By John Freeman Gill",
+      "type": "Article",
+      "title": "The Spectacular Transformation of a Showman’s Mansion",
+      "abstract": "The Harlem home of the circus impresario James A. Bailey is being restored, detail by detail, by a couple who are learning the job as they go along.",
+      "des_facet": [
+        "Real Estate and Housing (Residential)",
+        "Restoration and Renovation",
+        "Interior Design and Furnishings",
+        "Architecture",
+        "Historic Buildings and Sites",
+        "Content Type: Personal Profile"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Bailey, James A"
+      ],
+      "geo_facet": [
+        "Harlem (Manhattan, NY)"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The 1888 James A. Bailey mansion on St. Nicholas Place in Harlem had fallen into great disrepair before a couple bought the house in 2009 for $1.4 million and began a restoration that continues today.",
+          "copyright": "Tony Cenicola/The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/03/27/multimedia/27Streetscapes-Bailey-zlbv/27Streetscapes-Bailey-zlbv-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/03/27/multimedia/27Streetscapes-Bailey-zlbv/27Streetscapes-Bailey-zlbv-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/03/27/multimedia/27Streetscapes-Bailey-zlbv/27Streetscapes-Bailey-zlbv-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/6a2b70f4-9b88-558c-a1bf-abfe57589c47",
+      "url": "https://www.nytimes.com/2024/06/17/business/ai-drugs-development-terray.html",
+      "id": 100000009504199,
+      "asset_id": 100000009504199,
+      "source": "New York Times",
+      "published_date": "2024-06-17",
+      "updated": "2024-06-23 22:38:04",
+      "section": "Business",
+      "subsection": "",
+      "nytdsection": "business",
+      "adx_keywords": "Artificial Intelligence;Computers and the Internet;Drugs (Pharmaceuticals);Clinical Trials;Innovation;Start-ups;Laboratories and Scientific Equipment;Research;vis-photo;Terray Therapeutics Inc;Isomorphic Labs Ltd;Google Inc;NVIDIA Corporation",
+      "column": null,
+      "byline": "By Steve Lohr and Spencer Lowell",
+      "type": "Article",
+      "title": "How A.I. Is Revolutionizing Drug Development",
+      "abstract": "In high-tech labs, workers are generating data to train A.I. algorithms to design better medicine, faster. But the transformation is just getting underway.",
+      "des_facet": [
+        "Artificial Intelligence",
+        "Computers and the Internet",
+        "Drugs (Pharmaceuticals)",
+        "Clinical Trials",
+        "Innovation",
+        "Start-ups",
+        "Laboratories and Scientific Equipment",
+        "Research",
+        "vis-photo"
+      ],
+      "org_facet": [
+        "Terray Therapeutics Inc",
+        "Isomorphic Labs Ltd",
+        "Google Inc",
+        "NVIDIA Corporation"
+      ],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Chips in a container at Terray Therapeutics in Monrovia, Calif. Each of the custom-made chips has millions of minuscule wells for measuring drug screening reactions quickly and accurately.",
+          "copyright": "",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/07/multimedia/AI-DRUGS-ALT-wglh/AI-DRUGS-ALT-wglh-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/07/multimedia/AI-DRUGS-ALT-wglh/AI-DRUGS-ALT-wglh-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/07/multimedia/AI-DRUGS-ALT-wglh/AI-DRUGS-ALT-wglh-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/257088ab-3b2e-5991-9ceb-5f9a63ff73a0",
+      "url": "https://www.nytimes.com/2024/06/22/opinion/sean-penn-profile.html",
+      "id": 100000009525949,
+      "asset_id": 100000009525949,
+      "source": "New York Times",
+      "published_date": "2024-06-22",
+      "updated": "2024-06-23 13:06:56",
+      "section": "Opinion",
+      "subsection": "",
+      "nytdsection": "opinion",
+      "adx_keywords": "Content Type: Personal Profile;Actors and Actresses;Humanitarian Aid;Russian Invasion of Ukraine (2022);Penn, Sean;Community Organized Relief Effort (CORE) (Nonprofit)",
+      "column": null,
+      "byline": "By Maureen Dowd",
+      "type": "Article",
+      "title": "Sean Penn, Rebel With Many Causes",
+      "abstract": "He’s just as intense, but a bit more mellow. Or is he?",
+      "des_facet": [
+        "Content Type: Personal Profile",
+        "Actors and Actresses",
+        "Humanitarian Aid",
+        "Russian Invasion of Ukraine (2022)"
+      ],
+      "org_facet": [
+        "Community Organized Relief Effort (CORE) (Nonprofit)"
+      ],
+      "per_facet": [
+        "Penn, Sean"
+      ],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Balazs Gardi for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/23/multimedia/22dowd3-flzm/22dowd3-flzm-thumbStandard-v2.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/23/multimedia/22dowd3-flzm/22dowd3-flzm-mediumThreeByTwo210-v2.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/23/multimedia/22dowd3-flzm/22dowd3-flzm-mediumThreeByTwo440-v2.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/e9e2e612-28a6-59be-ab8e-2ace64d1471e",
+      "url": "https://www.nytimes.com/2024/06/17/opinion/indiana-christian-nationalist-republican-party.html",
+      "id": 100000009526766,
+      "asset_id": 100000009526766,
+      "source": "New York Times",
+      "published_date": "2024-06-17",
+      "updated": "2024-06-19 22:20:51",
+      "section": "Opinion",
+      "subsection": "",
+      "nytdsection": "opinion",
+      "adx_keywords": "Elections, Governors;Right-Wing Extremism and Alt-Right;Christians and Christianity;Politics and Government;Beckwith, Micah;Braun, Michael (1954- );Bopp, James Jr;Republican Party;Indiana",
+      "column": null,
+      "byline": "By Michelle Goldberg",
+      "type": "Article",
+      "title": "In Indiana, the MAGA Revolution Eats Its Own",
+      "abstract": "A Christian nationalist upset causes Republican angst.",
+      "des_facet": [
+        "Elections, Governors",
+        "Right-Wing Extremism and Alt-Right",
+        "Christians and Christianity",
+        "Politics and Government"
+      ],
+      "org_facet": [
+        "Republican Party"
+      ],
+      "per_facet": [
+        "Beckwith, Micah",
+        "Braun, Michael (1954- )",
+        "Bopp, James Jr"
+      ],
+      "geo_facet": [
+        "Indiana"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Jon Cherry/Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/opinion/17goldberg1/17goldberg1-thumbStandard-v4.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/opinion/17goldberg1/17goldberg1-mediumThreeByTwo210-v6.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/opinion/17goldberg1/17goldberg1-mediumThreeByTwo440-v5.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/956ab6dc-f607-543c-910e-f7c5006f0df1",
+      "url": "https://www.nytimes.com/2024/06/15/magazine/alcohol-health-risks.html",
+      "id": 100000009508660,
+      "asset_id": 100000009508660,
+      "source": "New York Times",
+      "published_date": "2024-06-15",
+      "updated": "2024-06-18 17:26:17",
+      "section": "Magazine",
+      "subsection": "",
+      "nytdsection": "magazine",
+      "adx_keywords": "Alcoholic Beverages;Medicine and Health;Research;Cocktails and Mixed Drinks;Alcohol Abuse;Wines;Centers for Disease Control and Prevention",
+      "column": null,
+      "byline": "By Susan Dominus",
+      "type": "Article",
+      "title": "Is That Drink Worth It to You?",
+      "abstract": "Alcohol is riskier than previously thought, but weighing the trade-offs of health risks can be deeply personal.",
+      "des_facet": [
+        "Alcoholic Beverages",
+        "Medicine and Health",
+        "Research",
+        "Cocktails and Mixed Drinks",
+        "Alcohol Abuse",
+        "Wines"
+      ],
+      "org_facet": [
+        "Centers for Disease Control and Prevention"
+      ],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Photo illustration by Ricardo Tomás",
+          "approved_for_syndication": 0,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/16/magazine/16mag-alcohol2/16mag-alcohol2-thumbStandard-v3.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/16/magazine/16mag-alcohol2/16mag-alcohol2-mediumThreeByTwo210-v3.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/16/magazine/16mag-alcohol2/16mag-alcohol2-mediumThreeByTwo440-v3.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/9bff7129-4b62-5b5b-a05d-6e653068665b",
+      "url": "https://www.nytimes.com/2024/06/18/well/mind/nose-mental-health-brain-smell.html",
+      "id": 100000009441734,
+      "asset_id": 100000009441734,
+      "source": "New York Times",
+      "published_date": "2024-06-18",
+      "updated": "2024-06-23 23:54:15",
+      "section": "Well",
+      "subsection": "Mind",
+      "nytdsection": "well",
+      "adx_keywords": "Smell (Olfaction);Content Type: Service;Brain;Mental Health and Disorders;Memory;Dementia;Depression (Mental);Tests (Medical)",
+      "column": null,
+      "byline": "By Marta Zaraska",
+      "type": "Article",
+      "title": "How (and Why) to Test Your Sense of Smell",
+      "abstract": "Experts say a loss of smell can negatively impact mental health. But training your nose can fight off the decline.",
+      "des_facet": [
+        "Smell (Olfaction)",
+        "Content Type: Service",
+        "Brain",
+        "Mental Health and Disorders",
+        "Memory",
+        "Dementia",
+        "Depression (Mental)",
+        "Tests (Medical)"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Experts say that by consciously and intentionally testing and training your nose, you can improve your sense of smell.",
+          "copyright": "Grant Harder for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/18/multimedia/18NOSE-TRAINING-BRAIN-HEALTH2-jbpk/18NOSE-TRAINING-BRAIN-HEALTH2-jbpk-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/18/multimedia/18NOSE-TRAINING-BRAIN-HEALTH2-jbpk/18NOSE-TRAINING-BRAIN-HEALTH2-jbpk-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/18/multimedia/18NOSE-TRAINING-BRAIN-HEALTH2-jbpk/18NOSE-TRAINING-BRAIN-HEALTH2-jbpk-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/8225f405-0a85-56d3-a5e5-286026c6b66b",
+      "url": "https://www.nytimes.com/2024/06/22/science/pets-health-behavior.html",
+      "id": 100000009362876,
+      "asset_id": 100000009362876,
+      "source": "New York Times",
+      "published_date": "2024-06-22",
+      "updated": "2024-06-23 14:01:51",
+      "section": "Science",
+      "subsection": "",
+      "nytdsection": "science",
+      "adx_keywords": "Pets;Animal Abuse, Rights and Welfare;Dogs;Cats;Veterinary Medicine;your-feed-science;your-feed-animals",
+      "column": null,
+      "byline": "By Linda Baker",
+      "type": "Article",
+      "title": "Are We Loving Our Pets to Death?",
+      "abstract": "Pet owners are treating their animal charges ever more like humans. But that isn’t good for pets, or for us, many experts argue.",
+      "des_facet": [
+        "Pets",
+        "Animal Abuse, Rights and Welfare",
+        "Dogs",
+        "Cats",
+        "Veterinary Medicine",
+        "your-feed-science",
+        "your-feed-animals"
+      ],
+      "org_facet": [],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The proliferation of dog strollers is one sign of a trend in which pets’ lives have become constrained and dependent on humans. ",
+          "copyright": "Graham Dickie/The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/14/multimedia/30SP-SCIPET-PETPARADOX-02-zbkt/00SP-SCIPET-PETPARADOX-02-zbkt-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/14/multimedia/30SP-SCIPET-PETPARADOX-02-zbkt/00SP-SCIPET-PETPARADOX-02-zbkt-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/14/multimedia/30SP-SCIPET-PETPARADOX-02-zbkt/00SP-SCIPET-PETPARADOX-02-zbkt-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/aee98c7f-5b67-53b7-9716-f2e0f0429048",
+      "url": "https://www.nytimes.com/2024/06/20/world/europe/french-election-antisemitism-jews.html",
+      "id": 100000009531293,
+      "asset_id": 100000009531293,
+      "source": "New York Times",
+      "published_date": "2024-06-20",
+      "updated": "2024-06-21 12:33:38",
+      "section": "World",
+      "subsection": "Europe",
+      "nytdsection": "world",
+      "adx_keywords": "Elections;Politics and Government;Legislatures and Parliaments;Right-Wing Extremism and Alt-Right;Anti-Semitism;Jews and Judaism;Sex Crimes;Israel-Gaza War (2023- );Le Pen, Jean-Marie;Melenchon, Jean-Luc;Macron, Emmanuel (1977- );National Rally (France);France Unbowed (Political Party);France;Gaza Strip;Israel",
+      "column": null,
+      "byline": "By Roger Cohen",
+      "type": "Article",
+      "title": "French Election Becomes ‘Nightmare’ for Nation’s Jews",
+      "abstract": "An attack on a 12-year-old Jewish girl is inflaming an already tense and divisive situation.",
+      "des_facet": [
+        "Elections",
+        "Politics and Government",
+        "Legislatures and Parliaments",
+        "Right-Wing Extremism and Alt-Right",
+        "Anti-Semitism",
+        "Jews and Judaism",
+        "Sex Crimes",
+        "Israel-Gaza War (2023- )"
+      ],
+      "org_facet": [
+        "National Rally (France)",
+        "France Unbowed (Political Party)"
+      ],
+      "per_facet": [
+        "Le Pen, Jean-Marie",
+        "Melenchon, Jean-Luc",
+        "Macron, Emmanuel (1977- )"
+      ],
+      "geo_facet": [
+        "France",
+        "Gaza Strip",
+        "Israel"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Demonstrators in Lyon, France, on Wednesday protesting antisemitism and an alleged attack on a 12-year-old girl outside Paris.",
+          "copyright": "Jean-Philippe Ksiazek/Agence France-Presse — Getty Images",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/multimedia/20france-antisemitistm-01-gkwb/20france-antisemitistm-01-gkwb-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/multimedia/20france-antisemitistm-01-gkwb/20france-antisemitistm-01-gkwb-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/20/multimedia/20france-antisemitistm-01-gkwb/20france-antisemitistm-01-gkwb-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/fa879f41-818f-537e-89dc-d8fc3bcaf002",
+      "url": "https://www.nytimes.com/2024/06/19/us/louisiana-ten-commandments-classrooms.html",
+      "id": 100000009504053,
+      "asset_id": 100000009504053,
+      "source": "New York Times",
+      "published_date": "2024-06-19",
+      "updated": "2024-06-21 13:33:09",
+      "section": "U.S.",
+      "subsection": "",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Religion-State Relations;Education (K-12);Law and Legislation;Christians and Christianity;First Amendment (US Constitution);Politics and Government;State Legislatures;Landry, Jeffrey Martin;Republican Party;Louisiana",
+      "column": null,
+      "byline": "By Rick Rojas",
+      "type": "Article",
+      "title": "Louisiana Requires All Public Classrooms to Display Ten Commandments",
+      "abstract": "A law signed by Gov. Jeff Landry on Wednesday makes the state the only one with such a mandate. Critics have vowed to mount a constitutional challenge.",
+      "des_facet": [
+        "Religion-State Relations",
+        "Education (K-12)",
+        "Law and Legislation",
+        "Christians and Christianity",
+        "First Amendment (US Constitution)",
+        "Politics and Government",
+        "State Legislatures"
+      ],
+      "org_facet": [
+        "Republican Party"
+      ],
+      "per_facet": [
+        "Landry, Jeffrey Martin"
+      ],
+      "geo_facet": [
+        "Louisiana"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Gov. Jeff Landry of Louisiana signed legislation requiring the display of the Ten Commandments in every public classroom in the state.",
+          "copyright": "Pool photo by Michael Johnson",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/07/multimedia/00nat-louisiana-commandments-hwcb/00nat-louisiana-commandments-hwcb-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/07/multimedia/00nat-louisiana-commandments-hwcb/00nat-louisiana-commandments-hwcb-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/07/multimedia/00nat-louisiana-commandments-hwcb/00nat-louisiana-commandments-hwcb-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    },
+    {
+      "uri": "nyt://article/0a544c4e-3446-5685-990c-bfc04daad8c4",
+      "url": "https://www.nytimes.com/2024/06/20/well/move/walking-lower-back-pain.html",
+      "id": 100000009522283,
+      "asset_id": 100000009522283,
+      "source": "New York Times",
+      "published_date": "2024-06-20",
+      "updated": "2024-06-23 12:51:07",
+      "section": "Well",
+      "subsection": "Move",
+      "nytdsection": "well",
+      "adx_keywords": "Back (Human Body Part);Pain;Walking;Exercise;Lancet, The (Journal)",
+      "column": null,
+      "byline": "By Talya Minsberg",
+      "type": "Article",
+      "title": "Walking Can Be a Powerful Remedy for Back Pain",
+      "abstract": "A new study adds to a large body of evidence on the effectiveness of movement for treating and preventing pain.",
+      "des_facet": [
+        "Back (Human Body Part)",
+        "Pain",
+        "Walking",
+        "Exercise"
+      ],
+      "org_facet": [
+        "Lancet, The (Journal)"
+      ],
+      "per_facet": [],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "",
+          "copyright": "Joshua Bright for The New York Times",
+          "approved_for_syndication": 1,
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2024/06/25/multimedia/20WALKING-BACK-PAIN1-jkqv/20WALKING-BACK-PAIN1-jkqv-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": 75,
+              "width": 75
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/25/multimedia/20WALKING-BACK-PAIN1-jkqv/20WALKING-BACK-PAIN1-jkqv-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": 140,
+              "width": 210
+            },
+            {
+              "url": "https://static01.nyt.com/images/2024/06/25/multimedia/20WALKING-BACK-PAIN1-jkqv/20WALKING-BACK-PAIN1-jkqv-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": 293,
+              "width": 440
+            }
+          ]
+        }
+      ],
+      "eta_id": 0
+    }
+  ]
+}

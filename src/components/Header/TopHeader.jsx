@@ -10,7 +10,7 @@ const TopHeader = () => {
       <Button variant={"ghost"}>
         <GiHamburgerMenu />
       </Button>
-      <Image src={logo} h={{base: '28px', md:'34px', lg:'66px'}}></Image>
+      <Image src={logo} h={{base: '32px', md:'38px', lg:'66px'}}></Image>
       <Button variant={'link'} textDecoration={'none'}>
         <FaUser color="black" />
       </Button>

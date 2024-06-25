@@ -5,7 +5,7 @@ import BottomHeader from "./BottomHeader";
 
 const Header = () => {
   return (
-    <Flex as={"header"} flexDir={"column"}>
+    <Flex as={"header"} flexDir={"column"} mx={{base:'5', md:'10'}}>
       <Flex
         align={"center"}
         justify={"space-between"}
