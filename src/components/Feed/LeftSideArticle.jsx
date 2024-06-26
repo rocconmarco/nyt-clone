@@ -39,6 +39,7 @@ const LeftSideArticle = () => {
           <ArticleCard
             key={article.id}
             article={article}
+            articleUrl={article.url}
             imageUrl={imageUrl}
             imageCredits={imageCredits}
           />

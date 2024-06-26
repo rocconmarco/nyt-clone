@@ -24,6 +24,7 @@ const RightSideArticle = () => {
             title={book.title}
             description={book.description}
             bookImage={book.book_image}
+            bookUrl={book.amazon_product_url}
             contributor={book.contributor}
             rank={book.rank}
           />
