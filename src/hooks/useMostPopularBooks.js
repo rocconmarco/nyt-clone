@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { fetchMostPopularBooks } from "../services/api/apiRequest";
 
-const useMostPopularBooks = (listName = 'hardcover-fiction') => {
+const useMostPopularBooks = () => {
+  const [listName, setListName] = useState('hardcover-fiction')
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -19,8 +20,14 @@ const useMostPopularBooks = (listName = 'hardcover-fiction') => {
       }
     };
     getBooks();
+    console.log(books)
   }, [listName]);
-  return { books, loading, error };
+
+  const handleListNameChange = (newListName) => {
+    setListName(newListName);
+  };
+
+  return { listName, setListName, books, loading, error, handleListNameChange };
 };
 
 export default useMostPopularBooks;

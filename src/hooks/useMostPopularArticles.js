@@ -20,6 +20,7 @@ const useMostPopularArticles = () => {
       }
     };
     getArticles();
+    console.log(articles)
   }, [period]);
 
   const handlePeriodChange = (newPeriod) => {

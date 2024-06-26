@@ -25,8 +25,8 @@ const ArticleCard = ({ article, imageUrl, imageCredits }) => {
             {article.byline}
           </Text>
         </Box>
-        <Box maxW={"60%"} ml={5}>
-          <Image src={imageUrl} />
+        <Flex maxW={"60%"} ml={5} flexDir={'column'}>
+          <Image src={imageUrl} alignSelf={'end'} />
           <Text
             textAlign={"end"}
             fontSize={{ base: "xs", lg: "sm" }}
@@ -35,7 +35,7 @@ const ArticleCard = ({ article, imageUrl, imageCredits }) => {
           >
             {imageCredits}
           </Text>
-        </Box>
+        </Flex>
       </Flex>
     </Link>
   );
