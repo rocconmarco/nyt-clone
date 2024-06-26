@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { fetchMostPopularArticles } from "../services/api/apiRequest";
 
-const useMostPopularArticles = (period = 1) => {
+const useMostPopularArticles = () => {
+  const [period, setPeriod] = useState(1)
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -20,7 +21,12 @@ const useMostPopularArticles = (period = 1) => {
     };
     getArticles();
   }, [period]);
-  return { articles, loading, error };
+
+  const handlePeriodChange = (newPeriod) => {
+    setPeriod(newPeriod);
+  };
+
+  return { period, setPeriod, articles, loading, error, handlePeriodChange };
 };
 
 export default useMostPopularArticles;

@@ -17,7 +17,7 @@ const Header = () => {
       </Flex>
       <Flex
         align={"center"}
-        justify={"center"}
+        justify={"space-between"}
         py={3}
         borderBottom={"1px solid lightGray"}
       >

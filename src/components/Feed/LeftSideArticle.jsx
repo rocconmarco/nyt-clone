@@ -1,21 +1,15 @@
 import React from "react";
 import {
-  Flex,
-  Box,
-  Image,
-  Text,
-  Heading,
   Spinner,
   Alert,
   AlertIcon,
-  Container,
 } from "@chakra-ui/react";
 import imageNotFound from "../../img/image-not-found.png";
 import useMostPopularArticles from "../../hooks/useMostPopularArticles";
 import ArticleCard from "./ArticleCard";
 
 const LeftSideArticle = () => {
-  const { articles, loading, error } = useMostPopularArticles(1);
+  const { articles, loading, error } = useMostPopularArticles();
   if (loading) return <Spinner size="xl" />;
   if (error)
     return (

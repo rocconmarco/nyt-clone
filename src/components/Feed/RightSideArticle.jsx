@@ -1,11 +1,11 @@
 import React from 'react'
 import { Spinner, Alert, AlertIcon } from '@chakra-ui/react'
-import article2 from "../../img/article2-img.webp";
+
 import BookCard from './BookCard';
 import useMostPopularBooks from '../../hooks/useMostPopularBooks';
 
 const RightSideArticle = () => {
-  const { books, loading, error } = useMostPopularBooks('hardcover-fiction');
+  const { books, loading, error } = useMostPopularBooks('combined-print-and-e-book-fiction');
   if (loading) return <Spinner size="xl" />;
   if (error)
     return (
@@ -25,6 +25,7 @@ const RightSideArticle = () => {
             description={book.description}
             bookImage={book.book_image}
             contributor={book.contributor}
+            rank={book.rank}
           />
         );
       })}

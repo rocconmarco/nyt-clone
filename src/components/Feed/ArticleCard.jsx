@@ -8,12 +8,12 @@ const ArticleCard = ({ article, imageUrl, imageCredits }) => {
         <Heading as={"h3"} size={{base: "md", lg:"lg"}}>
           {article.title}
         </Heading>
-        <Text fontSize={{base:"sm", lg:"md"}}>{article.abstract}</Text>
+        <Text fontSize={{base:"sm", lg:"md"}} mt={2}>{article.abstract}</Text>
         <Text fontSize={"sm"} color={'gray'}>{article.byline}</Text>
       </Box>
-      <Box maxW={"60%"}>
+      <Box maxW={"60%"} ml={5}>
         <Image src={imageUrl} />
-        <Text textAlign={'end'} fontSize={{base:"xs", lg: "sm"}} color={'gray'}>{imageCredits}</Text>
+        <Text textAlign={'end'} fontSize={{base:"xs", lg: "sm"}} color={'gray'} mt={2}>{imageCredits}</Text>
       </Box>
     </Flex>
   );
