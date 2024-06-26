@@ -13,12 +13,12 @@ const ArticleCard = ({ article, imageUrl, imageCredits }) => {
         <Box maxW={"40%"} key={article.id}>
           <Heading
             as={"h3"}
-            size={{ base: "md", lg: "lg" }}
+            size={{ base: "md", md: "lg" }}
             _hover={{ color: "gray.600" }}
           >
             {article.title}
           </Heading>
-          <Text fontSize={{ base: "sm", lg: "md" }} mt={2}>
+          <Text fontSize={{base: 'md'}} mt={2}>
             {article.abstract}
           </Text>
           <Text fontSize={"sm"} color={"gray"}>
@@ -29,7 +29,7 @@ const ArticleCard = ({ article, imageUrl, imageCredits }) => {
           <Image src={imageUrl} alignSelf={'end'} />
           <Text
             textAlign={"end"}
-            fontSize={{ base: "xs", lg: "sm" }}
+            fontSize={{ base: "sm"}}
             color={"gray"}
             mt={2}
           >

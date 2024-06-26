@@ -18,7 +18,7 @@ const SelectBookList = () => {
     <Box display={{ base: "none", md: "block" }}>
       <Menu>
         <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-          Best Sellers
+          Combined Print & E-book Fiction
         </MenuButton>
         <MenuList>
           <MenuOptionGroup

@@ -10,13 +10,13 @@ const SelectArticleList = () => {
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-        Best Articles
+      1 day
       </MenuButton>
       <MenuList>
       <MenuOptionGroup defaultValue={1} type="radio">
         {
           periodValues.map((option) => (
-            <MenuItemOption key={option.id} value={option.value} onClick={() => handlePeriodChange(1)}>{option.title}</MenuItemOption>
+            <MenuItemOption key={option.id} value={option.value}>{option.title}</MenuItemOption>
           ))
         }
         </MenuOptionGroup>
