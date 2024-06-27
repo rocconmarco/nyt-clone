@@ -1,24 +1,34 @@
 import React from "react";
-import { Menu, MenuButton, MenuList, MenuItem, Button, MenuOptionGroup, MenuItemOption } from "@chakra-ui/react";
+import { Menu, MenuButton, MenuList, Button, MenuOptionGroup, MenuItemOption } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import useMostPopularArticles from "../../hooks/useMostPopularArticles";
 import periodValues from '../../utils/periodValues'
 
-const SelectArticleList = () => {
-  const { handlePeriodChange } = useMostPopularArticles();
+const SelectArticleList = ({ selectedPeriod = periodValues[0], onPeriodChange }) => {
+  const handleSelection = (value) => {
+    const selected = periodValues.find(option => option.value === parseInt(value))
+    if (selected && typeof onPeriodChange === 'function') {
+      onPeriodChange(selected)
+    } else {
+      console.warn('onPeriodChange is not a function or is undefined');
+    }
+  }
 
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-      1 day
+        {selectedPeriod?.title || 'Select Period'}
       </MenuButton>
       <MenuList>
-      <MenuOptionGroup defaultValue={1} type="radio">
-        {
-          periodValues.map((option) => (
-            <MenuItemOption key={option.id} value={option.value}>{option.title}</MenuItemOption>
-          ))
-        }
+        <MenuOptionGroup 
+          defaultValue={selectedPeriod?.value?.toString() || periodValues[0].value.toString()} 
+          type="radio" 
+          onChange={handleSelection}
+        >
+          {
+            periodValues.map((option) => (
+              <MenuItemOption key={option.id} value={option.value.toString()}>{option.title}</MenuItemOption>
+            ))
+          }
         </MenuOptionGroup>
       </MenuList>
     </Menu>
@@ -26,3 +36,4 @@ const SelectArticleList = () => {
 };
 
 export default SelectArticleList;
+

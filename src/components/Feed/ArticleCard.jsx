@@ -26,7 +26,7 @@ const ArticleCard = ({ article, imageUrl, imageCredits }) => {
           </Text>
         </Box>
         <Flex maxW={"60%"} ml={5} flexDir={'column'}>
-          <Image src={imageUrl} alignSelf={'end'} />
+          <Image src={imageUrl} alignSelf={'end'} w={500} />
           <Text
             textAlign={"end"}
             fontSize={{ base: "sm"}}

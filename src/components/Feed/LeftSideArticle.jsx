@@ -1,15 +1,22 @@
-import React from "react";
-import {
-  Spinner,
-  Alert,
-  AlertIcon,
-} from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Spinner, Alert, AlertIcon, Flex, Heading } from "@chakra-ui/react";
 import imageNotFound from "../../img/image-not-found.png";
 import useMostPopularArticles from "../../hooks/useMostPopularArticles";
 import ArticleCard from "./ArticleCard";
+import SelectArticleList from "./SelectArticleList";
+import periodValues from "../../utils/periodValues";
 
 const LeftSideArticle = () => {
-  const { articles, loading, error } = useMostPopularArticles();
+  const [selectedPeriod, setSelectedPeriod] = useState(periodValues[0]);
+  const { articles, loading, error } = useMostPopularArticles(
+    selectedPeriod.value
+  );
+
+  const handlePeriodChange = (newPeriod) => {
+    console.log("Changing period to:", newPeriod);
+    setSelectedPeriod(newPeriod);
+  };
+
   if (loading) return <Spinner size="xl" />;
   if (error)
     return (
@@ -21,6 +28,15 @@ const LeftSideArticle = () => {
 
   return (
     <>
+      <Flex flexDir={"row"} alignItems={"center"} mb={8}>
+        <Heading fontSize={20} mr={5}>
+          Top Articles
+        </Heading>
+        <SelectArticleList
+          selectedPeriod={selectedPeriod}
+          onPeriodChange={handlePeriodChange}
+        />
+      </Flex>
       {articles.map((article) => {
         const imageUrl =
           article.media &&
@@ -31,9 +47,7 @@ const LeftSideArticle = () => {
             : imageNotFound;
 
         const imageCredits =
-          article.media && article.media[0]
-            ? article.media[0].copyright
-            : '';
+          article.media && article.media[0] ? article.media[0].copyright : "";
 
         return (
           <ArticleCard

@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { fetchMostPopularArticles } from "../services/api/apiRequest";
 
-const useMostPopularArticles = () => {
-  const [period, setPeriod] = useState(1)
+const useMostPopularArticles = (initialPeriod = 1) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const getArticles = async () => {
+      setLoading(true);
       try {
-        const data = await fetchMostPopularArticles(period);
+        const data = await fetchMostPopularArticles(initialPeriod);
         setArticles(data.results);
-        setLoading(false)
       } catch (err) {
         setError(err);
       } finally {
@@ -20,14 +19,10 @@ const useMostPopularArticles = () => {
       }
     };
     getArticles();
-    console.log(articles)
-  }, [period]);
+  }, [initialPeriod]);
 
-  const handlePeriodChange = (newPeriod) => {
-    setPeriod(newPeriod);
-  };
-
-  return { period, setPeriod, articles, loading, error, handlePeriodChange };
+  return { articles, loading, error };
 };
 
 export default useMostPopularArticles;
+
