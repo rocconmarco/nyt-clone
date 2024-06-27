@@ -1,11 +1,19 @@
-import React from 'react'
-import { Spinner, Alert, AlertIcon } from '@chakra-ui/react'
-
+import React, { useState } from 'react'
+import { Spinner, Alert, AlertIcon, Flex, Heading, VStack } from '@chakra-ui/react'
 import BookCard from './BookCard';
 import useMostPopularBooks from '../../hooks/useMostPopularBooks';
+import bookListValues from '../../utils/bookListValues';
+import SelectBookList from './SelectBookList';
 
 const RightSideArticle = () => {
-  const { books, loading, error } = useMostPopularBooks('combined-print-and-e-book-fiction');
+  const [selectedBookList, setSelectedBookList] = useState(bookListValues[0])
+  const { books, loading, error } = useMostPopularBooks(selectedBookList.value);
+
+  const handleBookListChange = (newBookList) => {
+    console.log("Changing book list to:", newBookList)
+    setSelectedBookList(newBookList)
+  }
+
   if (loading) return <Spinner size="xl" />;
   if (error)
     return (
@@ -16,22 +24,35 @@ const RightSideArticle = () => {
     );
 
   return (
-    <>
-      {books.map((book) => {
-        return (
-          <BookCard
-            key={book.primary_isbn13}
-            title={book.title}
-            description={book.description}
-            bookImage={book.book_image}
-            bookUrl={book.amazon_product_url}
-            contributor={book.contributor}
-            rank={book.rank}
-          />
-        );
-      })}
-    </>
+    <VStack spacing={4} align="stretch">
+      <Flex
+        flexDir={'column'}
+        alignItems={"center"}
+        justifyContent="space-between"
+        mb={8}
+      >
+        <Heading fontSize={20} mr={5} mb={{ base: 2.5 }}>
+          Top Books
+        </Heading>
+        <SelectBookList
+          selectedBookList={selectedBookList}
+          onBookListChange={handleBookListChange}
+        />
+      </Flex>
+      {books.map((book) => (
+        <BookCard
+          key={book.primary_isbn13}
+          title={book.title}
+          description={book.description}
+          bookImage={book.book_image}
+          bookUrl={book.amazon_product_url}
+          contributor={book.contributor}
+          rank={book.rank}
+        />
+      ))}
+    </VStack>
   );
 };
 
 export default RightSideArticle;
+

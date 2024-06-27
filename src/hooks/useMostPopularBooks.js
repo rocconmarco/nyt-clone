@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { fetchMostPopularBooks } from "../services/api/apiRequest";
 
-const useMostPopularBooks = () => {
-  const [listName, setListName] = useState('hardcover-fiction')
+const useMostPopularBooks = (initialBookList = 'combined-print-and-e-book-fiction') => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const getBooks = async () => {
+      setLoading(true);
       try {
-        const data = await fetchMostPopularBooks(listName);
+        const data = await fetchMostPopularBooks(initialBookList);
         setBooks(data.results.books);
-        setLoading(false)
       } catch (err) {
         setError(err);
       } finally {
@@ -20,14 +19,9 @@ const useMostPopularBooks = () => {
       }
     };
     getBooks();
-    console.log(books)
-  }, [listName]);
+  }, [initialBookList]);
 
-  const handleListNameChange = (newListName) => {
-    setListName(newListName);
-  };
-
-  return { listName, setListName, books, loading, error, handleListNameChange };
+  return { books, loading, error };
 };
 
 export default useMostPopularBooks;

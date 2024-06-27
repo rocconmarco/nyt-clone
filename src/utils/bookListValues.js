@@ -7,7 +7,7 @@ const bookListValues = [
   {
     id: 2,
     title: "Combined Print & E-Book Nonfiction",
-    value: "combined-print-and-e-book-non-fiction",
+    value: "combined-print-and-e-book-nonfiction",
   },
   {
     id: 3,

@@ -1,40 +1,39 @@
 import React from "react";
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Button,
-  Box,
-  Flex,
-  MenuOptionGroup,
-  MenuItemOption,
-} from "@chakra-ui/react";
+import { Menu, MenuButton, MenuList, Button, MenuOptionGroup, MenuItemOption } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import bookListValues from "../../utils/bookListValues";
+import bookListValues from '../../utils/bookListValues'
 
-const SelectBookList = () => {
+const SelectBookList = ({ selectedBookList, onBookListChange }) => {
+  const handleSelection = (value) => {
+    const selected = bookListValues.find(option => option.value === value)
+    if (selected && typeof onBookListChange === 'function') {
+      onBookListChange(selected)
+    } else {
+      console.warn('onBookListChange is not a function or is undefined');
+    }
+  }
+
   return (
-    <Box display={{ base: "none", md: "block" }}>
-      <Menu>
-        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-          Combined Print & E-book Fiction
-        </MenuButton>
-        <MenuList>
-          <MenuOptionGroup
-            defaultValue={"combined-print-and-e-book-fiction"}
-            type="radio"
-          >
-            {bookListValues.map((option) => (
-              <MenuItemOption key={option.id} value={option.value}>
-                {option.title}
-              </MenuItemOption>
-            ))}
-          </MenuOptionGroup>
-        </MenuList>
-      </Menu>
-    </Box>
+    <Menu>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+        {selectedBookList?.title || 'Select Book List'}
+      </MenuButton>
+      <MenuList>
+        <MenuOptionGroup 
+          defaultValue={selectedBookList?.value || bookListValues[0].value} 
+          type="radio" 
+          onChange={handleSelection}
+        >
+          {
+            bookListValues.map((option) => (
+              <MenuItemOption key={option.id} value={option.value}>{option.title}</MenuItemOption>
+            ))
+          }
+        </MenuOptionGroup>
+      </MenuList>
+    </Menu>
   );
 };
 
 export default SelectBookList;
+

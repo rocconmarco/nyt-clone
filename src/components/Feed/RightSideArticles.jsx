@@ -11,17 +11,6 @@ const RightSideArticles = () => {
       borderLeft={"1px solid lightgray"}
       pl={4}
     >
-      <Flex
-        flexDir={{ xl: "column", lg: "column" }}
-        alignItems={"center"}
-        justifyContent="space-between"
-        mb={8}
-      >
-        <Heading fontSize={20} mr={5} mb={{ base: 2.5 }}>
-          Top Books
-        </Heading>
-        <SelectBookList />
-      </Flex>
       <RightSideArticle />
     </Flex>
   );
