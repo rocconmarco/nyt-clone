@@ -1,7 +1,6 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import React from "react";
 import RightSideArticle from "./RightSideArticle";
-import SelectBookList from "./SelectBookList";
 
 const RightSideArticles = () => {
   return (
