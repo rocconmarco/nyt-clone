@@ -17,7 +17,6 @@ const RightSideArticle = () => {
   const { books, loading, error } = useMostPopularBooks(selectedBookList.value);
 
   const handleBookListChange = (newBookList) => {
-    console.log("Changing book list to:", newBookList);
     setSelectedBookList(newBookList);
   };
 
