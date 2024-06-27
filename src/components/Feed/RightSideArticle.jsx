@@ -1,18 +1,25 @@
-import React, { useState } from 'react'
-import { Spinner, Alert, AlertIcon, Flex, Heading, VStack } from '@chakra-ui/react'
-import BookCard from './BookCard';
-import useMostPopularBooks from '../../hooks/useMostPopularBooks';
-import bookListValues from '../../utils/bookListValues';
-import SelectBookList from './SelectBookList';
+import React, { useState } from "react";
+import {
+  Spinner,
+  Alert,
+  AlertIcon,
+  Flex,
+  Heading,
+  VStack,
+} from "@chakra-ui/react";
+import BookCard from "./BookCard";
+import useMostPopularBooks from "../../hooks/useMostPopularBooks";
+import bookListValues from "../../utils/bookListValues";
+import SelectBookList from "./SelectBookList";
 
 const RightSideArticle = () => {
-  const [selectedBookList, setSelectedBookList] = useState(bookListValues[0])
+  const [selectedBookList, setSelectedBookList] = useState(bookListValues[0]);
   const { books, loading, error } = useMostPopularBooks(selectedBookList.value);
 
   const handleBookListChange = (newBookList) => {
-    console.log("Changing book list to:", newBookList)
-    setSelectedBookList(newBookList)
-  }
+    console.log("Changing book list to:", newBookList);
+    setSelectedBookList(newBookList);
+  };
 
   if (loading) return <Spinner size="xl" />;
   if (error)
@@ -26,7 +33,7 @@ const RightSideArticle = () => {
   return (
     <VStack spacing={4} align="stretch">
       <Flex
-        flexDir={'column'}
+        flexDir={"column"}
         alignItems={"center"}
         justifyContent="space-between"
         mb={8}
@@ -43,7 +50,7 @@ const RightSideArticle = () => {
         <BookCard
           key={book.primary_isbn13}
           title={book.title}
-          description={book.description}
+          description={book.description || "No description available"}
           bookImage={book.book_image}
           bookUrl={book.amazon_product_url}
           contributor={book.contributor}
@@ -55,4 +62,3 @@ const RightSideArticle = () => {
 };
 
 export default RightSideArticle;
-

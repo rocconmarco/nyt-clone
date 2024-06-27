@@ -3,7 +3,7 @@ import { Flex, Box, Image, Text, Heading, Link } from "@chakra-ui/react";
 
 const ArticleCard = ({ article, imageUrl, imageCredits }) => {
   return (
-    <Link href={article.url} _hover={ {textDecoration: "none"} }>
+    <Link href={article.url} _hover={ {textDecoration: "none"} } target="_blank">
       <Flex
         mb={5}
         paddingBottom={3}
