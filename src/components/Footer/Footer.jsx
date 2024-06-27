@@ -29,10 +29,10 @@ const Footer = () => {
             borderRight={"1px solid white"}
             pr={5}
           >
-            DISCLAIMER: This website is not the official site of "The New York
-            Times". It has been developed by Marco Roccon exclusively for
+            DISCLAIMER: This IS NOT the official website of "The New York
+            Times". This website has been developed by Marco Roccon exclusively for
             educational purposes, as part of the React course within the Master
-            in Blockchain Development.
+            in Blockchain Development from start2impact University.
           </Text>
           <Text color={"white"}>© 2024 Marco Roccon. All rights reserved.</Text>
         </Flex>

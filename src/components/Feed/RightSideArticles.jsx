@@ -10,6 +10,7 @@ const RightSideArticles = () => {
       display={{ base: "none", lg: "block" }}
       borderLeft={"1px solid lightgray"}
       pl={4}
+      minH={1000}
     >
       <RightSideArticle />
     </Flex>
