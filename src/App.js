@@ -1,13 +1,13 @@
-import Header from "./components/Header/Header";
-import Feed from "./components/Feed/Feed";
-import Footer from "./components/Footer/Footer";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/views/features/HomePage";
 
 function App() {
   return (
     <>
-      <Header />
-      <Feed />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/auth" element={<AuthPage />} />
+      </Routes>
     </>
   );
 }
