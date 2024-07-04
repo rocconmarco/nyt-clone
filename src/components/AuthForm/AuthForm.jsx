@@ -10,30 +10,15 @@ import {
 import React, { useState } from "react";
 import logo from "../../img/nyt-logo.png";
 import { FcGoogle } from "react-icons/fc";
+import Login from "./Login";
+import Signup from "./Signup";
 import { useNavigate } from "react-router-dom";
+import GoogleAuth from "./GoogleAuth";
 
 const AuthForm = () => {
-  const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);
-  const [inputs, setInputs] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-  });
+  const navigate = useNavigate()
 
-  const handleAuth = () => {
-    if (
-      !inputs.firstName ||
-      !inputs.lastName ||
-      !inputs.email ||
-      !inputs.password
-    ) {
-      alert("Please fill all the fields");
-      return;
-    }
-    navigate("/members")
-  };
   return (
     <>
       <Box
@@ -54,74 +39,8 @@ const AuthForm = () => {
             </Text>
           ) : null}
 
-          {!isLogin ? (
-            <>
-              <Box>
-                <Text pb={1}>First name</Text>
-                <Input
-                  type="text"
-                  fontSize={15}
-                  w={350}
-                  borderColor={"gray.400"}
-                  _hover={{ borderColor: "gray.400" }}
-                  value={inputs.firstName}
-                  onChange={(e) =>
-                    setInputs({ ...inputs, firstName: e.target.value })
-                  }
-                />
-              </Box>
-              <Box>
-                <Text pb={1}>Last name</Text>
-                <Input
-                  type="text"
-                  fontSize={15}
-                  w={350}
-                  borderColor={"gray.400"}
-                  _hover={{ borderColor: "gray.400" }}
-                  value={inputs.lastName}
-                  onChange={(e) =>
-                    setInputs({ ...inputs, lastName: e.target.value })
-                  }
-                />
-              </Box>
-            </>
-          ) : null}
-          <Box>
-            <Text pb={1}>Email</Text>
-            <Input
-              type="email"
-              fontSize={15}
-              w={350}
-              borderColor={"gray.400"}
-              _hover={{ borderColor: "gray.400" }}
-              value={inputs.email}
-              onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
-            />
-          </Box>
-          <Box>
-            <Text pb={1}>Password</Text>
-            <Input
-              type="password"
-              fontSize={15}
-              w={350}
-              borderColor={"gray.400"}
-              _hover={{ borderColor: "gray.400" }}
-              value={inputs.password}
-              onChange={(e) =>
-                setInputs({ ...inputs, password: e.target.value })
-              }
-            />
-          </Box>
-          <Button
-            w={350}
-            color="white"
-            bg={"black"}
-            _hover={{ bg: "black" }}
-            _active={{ bg: "gray" }}
-            onClick={handleAuth}
-          >
-            {!isLogin ? "Sign up" : "Log in"}
-          </Button>
+          {isLogin ? <Login /> : <Signup />}
+          
           <Flex
             alignItems={"center"}
             justifyContent={"center"}
@@ -136,14 +55,7 @@ const AuthForm = () => {
             <Box flex={2} h={"1px"} bg="black" />
           </Flex>
 
-          <Flex
-            alignItems={"center"}
-            justifyContent={"center"}
-            cursor={"pointer"}
-          >
-            <FcGoogle fontSize={25} />
-            <Text mx={2}>{!isLogin ? "Sign up" : "Log in"} with Google</Text>
-          </Flex>
+          <GoogleAuth />
         </VStack>
       </Box>
 
