@@ -1,10 +1,9 @@
 import React from 'react'
+import Header from '../../../components/Header/Header'
 
 const MembersPage = () => {
   return (
-    <div>
-      
-    </div>
+    <Header />
   )
 }
 
