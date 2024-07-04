@@ -37,16 +37,15 @@ const AuthForm = () => {
   return (
     <>
       <Box
-        border={"4px solid black"}
-        borderRadius={50}
         padding={5}
-        boxShadow={"5px 10px 30px black"}
       >
         <VStack spacing={4}>
           <Image
             src={logo}
             h={{ base: 16, sm: 20, md: 24 }}
             alt="The New York Clone"
+            cursor={'pointer'}
+            onClick={() => navigate("/")}
           />
           {!isLogin ? (
             <Text as={"i"} w={"auto"} maxW={400} textAlign={"center"}>
@@ -62,7 +61,7 @@ const AuthForm = () => {
                 <Input
                   type="text"
                   fontSize={15}
-                  w={250}
+                  w={350}
                   borderColor={"gray.400"}
                   _hover={{ borderColor: "gray.400" }}
                   value={inputs.firstName}
@@ -76,7 +75,7 @@ const AuthForm = () => {
                 <Input
                   type="text"
                   fontSize={15}
-                  w={250}
+                  w={350}
                   borderColor={"gray.400"}
                   _hover={{ borderColor: "gray.400" }}
                   value={inputs.lastName}
@@ -92,7 +91,7 @@ const AuthForm = () => {
             <Input
               type="email"
               fontSize={15}
-              w={250}
+              w={350}
               borderColor={"gray.400"}
               _hover={{ borderColor: "gray.400" }}
               value={inputs.email}
@@ -104,7 +103,7 @@ const AuthForm = () => {
             <Input
               type="password"
               fontSize={15}
-              w={250}
+              w={350}
               borderColor={"gray.400"}
               _hover={{ borderColor: "gray.400" }}
               value={inputs.password}
@@ -114,7 +113,7 @@ const AuthForm = () => {
             />
           </Box>
           <Button
-            w={250}
+            w={350}
             color="white"
             bg={"black"}
             _hover={{ bg: "black" }}
@@ -143,16 +142,13 @@ const AuthForm = () => {
             cursor={"pointer"}
           >
             <FcGoogle fontSize={25} />
-            <Text mx={2}>Sign up with Google</Text>
+            <Text mx={2}>{!isLogin ? "Sign up" : "Log in"} with Google</Text>
           </Flex>
         </VStack>
       </Box>
 
       <Box
-        border={"4px solid black"}
-        borderRadius={50}
         padding={5}
-        boxShadow={"5px 10px 30px black"}
       >
         <Flex alignItems={"center"} justifyContent={"center"}>
           <Box
