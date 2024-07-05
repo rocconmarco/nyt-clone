@@ -2,10 +2,13 @@ import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, Draw
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiLogoutBoxLine } from "react-icons/ri";
+import useLogout from "../../hooks/useLogout";
 
 const LeftSideDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+
+  const {handleLogout, isLoggingOut} = useLogout()
 
   return (
     <>
@@ -28,7 +31,7 @@ const LeftSideDrawer = () => {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant="outline" mr={3}>
+            <Button variant="outline" mr={3} onClick={handleLogout} isLoading={isLoggingOut}>
                 <Box mr={2}>
                     <RiLogoutBoxLine fontSize={20}/>
                 </Box>
