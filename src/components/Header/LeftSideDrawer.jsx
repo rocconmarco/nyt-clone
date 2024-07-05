@@ -1,12 +1,16 @@
 import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, useDisclosure } from "@chakra-ui/react";
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { RiLogoutBoxLine } from "react-icons/ri";
+import { RiLoginBoxLine, RiLogoutBoxLine } from "react-icons/ri";
 import useLogout from "../../hooks/useLogout";
+import useAuthStore from "../../store/authStore";
+import { useNavigate } from "react-router-dom";
 
 const LeftSideDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const authUser = useAuthStore((state) => state.user);
+  const navigate = useNavigate()
 
   const {handleLogout, isLoggingOut} = useLogout()
 
@@ -31,12 +35,20 @@ const LeftSideDrawer = () => {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={handleLogout} isLoading={isLoggingOut}>
+            {authUser ? (
+                <Button variant="outline" mr={3} onClick={handleLogout} isLoading={isLoggingOut}>
                 <Box mr={2}>
                     <RiLogoutBoxLine fontSize={20}/>
                 </Box>
               Logout
             </Button>
+            ) : <Button variant="outline" mr={3} onClick={() => navigate("/auth")}>
+            <Box mr={2}>
+                <RiLoginBoxLine fontSize={20}/>
+            </Box>
+          Log in
+        </Button>}
+            
             
           </DrawerFooter>
         </DrawerContent>
