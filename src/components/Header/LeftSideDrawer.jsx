@@ -3,13 +3,14 @@ import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiLoginBoxLine, RiLogoutBoxLine } from "react-icons/ri";
 import useLogout from "../../hooks/useLogout";
-import useAuthStore from "../../store/authStore";
 import { useNavigate } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase/firebase";
 
 const LeftSideDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  const authUser = useAuthStore((state) => state.user);
+  const [authUser] = useAuthState(auth)
   const navigate = useNavigate()
 
   const {handleLogout, isLoggingOut} = useLogout()
