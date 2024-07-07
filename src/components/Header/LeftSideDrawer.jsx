@@ -4,13 +4,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RiLoginBoxLine, RiLogoutBoxLine } from "react-icons/ri";
 import useLogout from "../../hooks/useLogout";
 import { useNavigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../../firebase/firebase";
+import useAuthStore from "../../store/authStore";
 
 const LeftSideDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  const [authUser] = useAuthState(auth)
+  const authUser = useAuthStore(state => state.user)
   const navigate = useNavigate()
 
   const {handleLogout, isLoggingOut} = useLogout()
@@ -29,7 +28,7 @@ const LeftSideDrawer = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Welcome</DrawerHeader>
+          <DrawerHeader>{authUser ? `Hello, ${authUser.firstName}.` : "The New York Clone"}</DrawerHeader>
 
           <DrawerBody>
             
