@@ -19,7 +19,7 @@ const TopHeader = () => {
       <Button variant={'link'} textDecoration={'none'} onClick={authUser ? () => navigate("/members") : () => navigate("/auth") }>
         <FaUser color="black" />
       </Button>
-      <Text>{authUser ? `${authUser.firstName} ${authUser.lastName}` : null}</Text>
+      <Text display={{base: 'none', md: 'block'}}>{authUser ? `${authUser.firstName} ${authUser.lastName}` : null}</Text>
       </Flex>
       
     </>

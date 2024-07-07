@@ -6,8 +6,7 @@ import LeftSideArticle from "./LeftSideArticle";
 const LeftSideArticles = () => {
   return (
     <>
-      <Flex flex={2} flexDir={"column"} mr={{ base: 0, md: 4 }} minH={1000}>
-       
+      <Flex flex={2} flexDir={"column"} mx={{base: 0, md: 4}} minH={1000}>
         <LeftSideArticle />
       </Flex>
     </>

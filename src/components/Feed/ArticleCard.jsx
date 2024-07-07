@@ -1,16 +1,24 @@
 import React from "react";
-import { Flex, Box, Image, Text, Heading, Link } from "@chakra-ui/react";
+import { Flex, Box, Image, Text, Heading, Link, Stack } from "@chakra-ui/react";
 
 const ArticleCard = ({ article, imageUrl, imageCredits }) => {
   return (
-    <Link href={article.url} _hover={ {textDecoration: "none"} } target="_blank">
-      <Flex
+    <Link
+      href={article.url}
+      _hover={{ textDecoration: "none" }}
+      target="_blank"
+    >
+      <Stack
+        direction={{ base: "column", md: "row" }}
         mb={5}
         paddingBottom={3}
-        justify={"space-between"}
         borderBottom={"1px solid lightgray"}
       >
-        <Box maxW={"40%"} key={article.id}>
+        <Box
+          w={{ base: "100%", md: "40%" }}
+          key={article.id}
+          order={{ base: 2, md: 1 }}
+        >
           <Heading
             as={"h3"}
             size={{ base: "md", md: "lg" }}
@@ -18,25 +26,30 @@ const ArticleCard = ({ article, imageUrl, imageCredits }) => {
           >
             {article.title}
           </Heading>
-          <Text fontSize={{base: 'md'}} mt={2}>
+          <Text fontSize={{ base: "md" }} mt={2}>
             {article.abstract}
           </Text>
           <Text fontSize={"sm"} color={"gray"}>
             {article.byline}
           </Text>
         </Box>
-        <Flex maxW={"60%"} ml={5} flexDir={'column'}>
-          <Image src={imageUrl} alignSelf={'end'} w={500} />
+        <Flex
+          w={{ base: "100%", md: "60%" }}
+          ml={{base: 0, md: 5}}
+          flexDir={"column"}
+          order={{ base: 1, md: 2 }}
+        >
+          <Image src={imageUrl} alignSelf={"end"} w={"100%"} />
           <Text
             textAlign={"end"}
-            fontSize={{ base: "sm"}}
+            fontSize={{ base: "sm" }}
             color={"gray"}
             mt={2}
           >
             {imageCredits}
           </Text>
         </Flex>
-      </Flex>
+      </Stack>
     </Link>
   );
 };
