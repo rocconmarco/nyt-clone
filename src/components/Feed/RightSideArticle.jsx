@@ -12,6 +12,8 @@ import useMostPopularBooks from "../../hooks/useMostPopularBooks";
 import bookListValues from "../../utils/bookListValues";
 import SelectBookList from "./SelectBookList";
 import useSavedItemsStore from "../../store/savedItemsStore";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase/firebase";
 
 const RightSideArticle = () => {
   const [selectedBookList, setSelectedBookList] = useState(bookListValues[0]);
@@ -20,9 +22,14 @@ const RightSideArticle = () => {
   const savedBooks = useSavedItemsStore((state) => state.savedBooks)
   const loadSavedBooks = useSavedItemsStore((state) => state.loadSavedBooks)
 
+  const [user] = useAuthState(auth)
+
   useEffect(() => {
-    loadSavedBooks()
-  }, [])
+    if(user) {
+      loadSavedBooks()
+    }
+    
+  }, [user, loadSavedBooks])
 
   const handleBookListChange = (newBookList) => {
     setSelectedBookList(newBookList);

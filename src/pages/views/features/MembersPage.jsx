@@ -24,6 +24,9 @@ const MembersPage = () => {
   );
   const setSavedBooks = useSavedItemsStore((state) => state.setSavedBooks);
 
+  const reversedSavedArticles = [...savedArticles].reverse();
+  const reversedSavedBooks = [...savedBooks].reverse();
+
   useEffect(() => {
     const loadSavedItems = async () => {
       const user = auth.currentUser;
@@ -41,12 +44,10 @@ const MembersPage = () => {
     loadSavedItems();
   }, [setSavedArticles, setSavedBooks]);
 
-  if (loading) return <Spinner size="xl" />;
-
   return (
     <>
       <Header />
-
+      {loading ? <Spinner mt={3} mx={{ base: "5", md: "10" }} size="xl" /> : null}
       <Flex
         mt={3}
         mb={8}
@@ -66,7 +67,7 @@ const MembersPage = () => {
           </Text>
         ) : (
           <>
-            {savedArticles.map((item) => (
+            {reversedSavedArticles.map((item) => (
               <Stack
                 direction={{ base: "column", md: "row" }}
                 borderWidth={"1px"}
@@ -124,7 +125,7 @@ const MembersPage = () => {
           </Text>
         ) : (
           <>
-            {savedBooks.map((item) => (
+            {reversedSavedBooks.map((item) => (
               <Stack
                 direction={{ base: "column", md: "row" }}
                 borderWidth={"1px"}

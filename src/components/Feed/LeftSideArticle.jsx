@@ -6,6 +6,8 @@ import ArticleCard from "./ArticleCard";
 import SelectArticleList from "./SelectArticleList";
 import periodValues from "../../utils/periodValues";
 import useSavedItemsStore from "../../store/savedItemsStore";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase/firebase";
 
 const LeftSideArticle = () => {
   const [selectedPeriod, setSelectedPeriod] = useState(periodValues[0]);
@@ -13,12 +15,17 @@ const LeftSideArticle = () => {
     selectedPeriod.value
   );
 
+  const [user] = useAuthState(auth)
+
   const savedArticles = useSavedItemsStore((state) => state.savedArticles)
   const loadSavedArticles = useSavedItemsStore((state) => state.loadSavedArticles)
 
   useEffect(() => {
-    loadSavedArticles();
-  }, []);
+    if (user) {
+      loadSavedArticles();
+    }
+  }, [user, loadSavedArticles]);
+
 
   const handlePeriodChange = (newPeriod) => {
     console.log("Changing period to:", newPeriod);
