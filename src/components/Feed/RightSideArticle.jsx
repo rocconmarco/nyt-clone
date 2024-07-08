@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Spinner,
   Alert,
@@ -11,10 +11,18 @@ import BookCard from "./BookCard";
 import useMostPopularBooks from "../../hooks/useMostPopularBooks";
 import bookListValues from "../../utils/bookListValues";
 import SelectBookList from "./SelectBookList";
+import useSavedItemsStore from "../../store/savedItemsStore";
 
 const RightSideArticle = () => {
   const [selectedBookList, setSelectedBookList] = useState(bookListValues[0]);
   const { books, loading, error } = useMostPopularBooks(selectedBookList.value);
+
+  const savedBooks = useSavedItemsStore((state) => state.savedBooks)
+  const loadSavedBooks = useSavedItemsStore((state) => state.loadSavedBooks)
+
+  useEffect(() => {
+    loadSavedBooks()
+  }, [])
 
   const handleBookListChange = (newBookList) => {
     setSelectedBookList(newBookList);
@@ -54,6 +62,7 @@ const RightSideArticle = () => {
           bookUrl={book.amazon_product_url}
           contributor={book.contributor}
           rank={book.rank}
+          savedBooks={savedBooks}
         />
       ))}
     </VStack>

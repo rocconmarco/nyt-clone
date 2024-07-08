@@ -1,11 +1,12 @@
 import React from "react";
 import { Flex, Box, Image, Text, Heading, Link } from "@chakra-ui/react";
 import imageNotFound from "../../img/image-not-found.png";
-import { FaRegStar } from "react-icons/fa";
+import { FaRegStar, FaStar } from "react-icons/fa";
 import useSavedItemsStore from "../../store/savedItemsStore";
 import { auth, firestore } from "../../firebase/firebase";
 import { nanoid } from "nanoid";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const BookCard = ({
   title,
@@ -14,30 +15,33 @@ const BookCard = ({
   description,
   rank,
   bookUrl,
+  savedBooks,
 }) => {
+  const [authUser] = useAuthState(auth);
+  const addSavedBook = useSavedItemsStore((state) => state.addSavedBook);
 
-  const addSavedBook = useSavedItemsStore((state) => state.addSavedBook)
+  const isSavedBook = savedBooks.some((savedBook) => savedBook.title === title);
 
   const handleSave = async (e) => {
-    e.preventDefault()
-    const user = auth.currentUser
-    if(user) {
+    e.preventDefault();
+    const user = auth.currentUser;
+    if (user) {
       const newBook = {
-        id:nanoid(),
+        id: nanoid(),
         title: title,
         description: description,
         bookImage: bookImage,
         contributor: contributor,
-        bookUrl: bookUrl
-      }
-      addSavedBook(newBook)
+        bookUrl: bookUrl,
+      };
+      addSavedBook(newBook);
 
-      const userDocRef = doc(firestore, "users", user.uid)
+      const userDocRef = doc(firestore, "users", user.uid);
       await updateDoc(userDocRef, {
-        savedBooks: arrayUnion(newBook)
-      })
+        savedBooks: arrayUnion(newBook),
+      });
     }
-  }
+  };
 
   return (
     <Flex
@@ -76,8 +80,16 @@ const BookCard = ({
               {rank}. {title}
             </Heading>
           </Link>
-          <Box onClick={handleSave} cursor={'pointer'} ml={2} mt={2}>
-            <FaRegStar fontSize={"20px"} />
+          <Box onClick={handleSave} cursor={"pointer"} ml={2} mt={2}>
+            {authUser ? (
+              <>
+                {isSavedBook ? (
+                  <FaStar fontSize={"20px"} color="#ffa500" />
+                ) : (
+                  <FaRegStar fontSize={"20px"} />
+                )}
+              </>
+            ) : null}
           </Box>
         </Flex>
 

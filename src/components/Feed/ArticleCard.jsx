@@ -1,34 +1,40 @@
 import React from "react";
-import { Flex, Box, Image, Text, Heading, Link, Stack, Button } from "@chakra-ui/react";
-import { auth, firestore } from '../../firebase/firebase';
-import { FaRegStar } from "react-icons/fa";
+import { Flex, Box, Image, Text, Heading, Link, Stack } from "@chakra-ui/react";
+import { auth, firestore } from "../../firebase/firebase";
+import { FaRegStar, FaStar } from "react-icons/fa";
 import useSavedItemsStore from "../../store/savedItemsStore";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { nanoid } from "nanoid";
+import { useAuthState } from "react-firebase-hooks/auth";
 
-const ArticleCard = ({ article, imageUrl, imageCredits }) => {
-  const addSavedArticle = useSavedItemsStore((state) => state.addSavedArticle)
+const ArticleCard = ({ article, imageUrl, imageCredits, savedArticles }) => {
+  const [authUser] = useAuthState(auth);
+  const addSavedArticle = useSavedItemsStore((state) => state.addSavedArticle);
+
+  const isArticleSaved = savedArticles.some(
+    (savedArticle) => savedArticle.title === article.title
+  );
 
   const handleSave = async (e) => {
-    e.preventDefault()
-    const user = auth.currentUser
-    if(user) {
+    e.preventDefault();
+    const user = auth.currentUser;
+    if (user) {
       const newArticle = {
-        id:nanoid(),
-        title:article.title,
-        description:article.abstract,
-        author:article.byline,
-        imageUrl:imageUrl,
-        url:article.url
-      }
-      addSavedArticle(newArticle)
+        id: nanoid(),
+        title: article.title,
+        description: article.abstract,
+        author: article.byline,
+        imageUrl: imageUrl,
+        url: article.url,
+      };
+      addSavedArticle(newArticle);
 
-      const userDocRef = doc(firestore, "users", user.uid)
+      const userDocRef = doc(firestore, "users", user.uid);
       await updateDoc(userDocRef, {
-        savedArticles: arrayUnion(newArticle)
-      })
+        savedArticles: arrayUnion(newArticle),
+      });
     }
-  }
+  };
 
   return (
     <Stack
@@ -61,7 +67,17 @@ const ArticleCard = ({ article, imageUrl, imageCredits }) => {
         <Text fontSize={"sm"} color={"gray"}>
           {article.byline}
         </Text>
-        <Box onClick={handleSave} cursor={'pointer'} mt={2}><FaRegStar fontSize={'20px'} /></Box>
+        <Box onClick={handleSave} cursor={"pointer"} mt={2}>
+          {authUser ? (
+            <>
+              {isArticleSaved ? (
+                <FaStar fontSize={"20px"} color="#ffa500" />
+              ) : (
+                <FaRegStar fontSize={"20px"} />
+              )}
+            </>
+          ) : null}
+        </Box>
       </Box>
       <Flex
         w={{ base: "100%", md: "60%" }}
@@ -80,7 +96,6 @@ const ArticleCard = ({ article, imageUrl, imageCredits }) => {
           {imageCredits}
         </Text>
       </Flex>
-      
     </Stack>
   );
 };

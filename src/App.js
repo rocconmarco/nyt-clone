@@ -4,6 +4,8 @@ import AuthPage from "./pages/views/features/AuthPage";
 import MembersPage from "./pages/views/features/MembersPage";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase/firebase";
+import useSavedItemsStore from "./store/savedItemsStore";
+import { useEffect } from "react";
 
 function App() {
   const [authUser] = useAuthState(auth)

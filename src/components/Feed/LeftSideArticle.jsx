@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Spinner, Alert, AlertIcon, Flex, Heading } from "@chakra-ui/react";
 import imageNotFound from "../../img/image-not-found.png";
 import useMostPopularArticles from "../../hooks/useMostPopularArticles";
 import ArticleCard from "./ArticleCard";
 import SelectArticleList from "./SelectArticleList";
 import periodValues from "../../utils/periodValues";
+import useSavedItemsStore from "../../store/savedItemsStore";
 
 const LeftSideArticle = () => {
   const [selectedPeriod, setSelectedPeriod] = useState(periodValues[0]);
   const { articles, loading, error } = useMostPopularArticles(
     selectedPeriod.value
   );
+
+  const savedArticles = useSavedItemsStore((state) => state.savedArticles)
+  const loadSavedArticles = useSavedItemsStore((state) => state.loadSavedArticles)
+
+  useEffect(() => {
+    loadSavedArticles();
+  }, []);
 
   const handlePeriodChange = (newPeriod) => {
     console.log("Changing period to:", newPeriod);
@@ -56,6 +64,7 @@ const LeftSideArticle = () => {
             articleUrl={article.url}
             imageUrl={imageUrl}
             imageCredits={imageCredits}
+            savedArticles={savedArticles}
           />
         );
       })}
