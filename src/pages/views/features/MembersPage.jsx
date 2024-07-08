@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../../components/Header/Header";
+import Footer from "../../../components/Footer/Footer"
 import useSavedItemsStore from "../../../store/savedItemsStore";
 import { auth, firestore } from "../../../firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
@@ -11,6 +12,7 @@ import {
   Text,
   Image,
   Link,
+  Stack,
 } from "@chakra-ui/react";
 
 const MembersPage = () => {
@@ -44,52 +46,100 @@ const MembersPage = () => {
   return (
     <>
       <Header />
-      
-      <Flex mt={3} gap={5} mx={{base:'5', md:'10'}} flexDir={'column'}>
-      <Heading as={"h1"}>My favorites</Heading>
-        <Heading fontSize={'24px'} as={"h2"}>Articles</Heading>
+
+      <Flex mt={3} mb={8} minH={1000} gap={5} mx={{ base: "5", md: "10" }} flexDir={"column"}>
+        <Heading as={"h1"}>My favorites</Heading>
+        <Heading fontSize={"24px"} as={"h2"}>
+          Articles
+        </Heading>
         {savedArticles.map((item) => (
-          <Box flex={1}
-            key={item.id}
-            mb={5}
-            p={3}
+          <Stack
+            direction={{ base: "column", md: "row" }}
             borderWidth={"1px"}
             borderRadius={"lg"}
+            maxW={{base:'100vw', md:"70vw"}}
           >
-            <Link href={item.url}>
-              <Heading size={"md"}>{item.title}</Heading>
-            </Link>
-            <Text>{item.description}</Text>
-            <Text fontSize="sm" color="gray.500">
-              {item.author}
-            </Text>
-            <Link href={item.url}>
-              <Image src={item.imageUrl} alt={item.title} />
-            </Link>
-          </Box>
+            <Flex flexDir={{base: 'column', md: 'row'}}>
+              <Box>
+                <Link href={item.url} target="_blank">
+                  <Image
+                    borderLeftRadius={"lg"}
+                    borderRightRadius={{base: 'lg', md: 'none'}}
+                    borderBottomRadius={{base: 'none', md: 'lg'}}
+                    borderBottomEndRadius={{base: 'none', md:'none'}}
+                    src={item.imageUrl}
+                    alt={item.title}
+                    w={{base:'100vw', md: '35vw'}}
+                  />
+                </Link>
+              </Box>
+              <Box
+                flex={1}
+                key={item.id}
+                mb={1}
+                p={3}
+                w={{ base: "100%", md: "50%" }}
+              >
+                <Link
+                  href={item.url}
+                  _hover={{ textDecoration: "none" }}
+                  target="_blank"
+                >
+                  <Heading size={"md"} _hover={{ color: "gray.600" }}>{item.title}</Heading>
+                </Link>
+                <Text>{item.description}</Text>
+                <Text fontSize="sm" color="gray.500">
+                  {item.author}
+                </Text>
+              </Box>
+            </Flex>
+          </Stack>
         ))}
-        <Heading fontSize={'24px'} as={"h2"}>Books</Heading>
+        <Heading fontSize={"24px"} as={"h2"}>
+          Books
+        </Heading>
         {savedBooks.map((item) => (
-          <Box flex={1}
-            key={item.id}
-            mb={5}
-            p={3}
+          <Stack
+            direction={{ base: "column", md: "row" }}
             borderWidth={"1px"}
             borderRadius={"lg"}
+            maxW={{base:'100vw', md:"60vw"}}
           >
-            <Link href={item.url}>
-              <Heading size={"md"}>{item.title}</Heading>
-            </Link>
-            <Text>{item.description}</Text>
-            <Text fontSize="sm" color="gray.500">
-              {item.contributor}
-            </Text>
-            <Link href={item.url}>
-              <Image src={item.bookImage} alt={item.title} />
-            </Link>
-          </Box>
+            <Flex flexDir={{base: 'column', md: 'row'}} maxH={'100%'}>
+              <Flex justifyContent={{base:'center', md:'start'}}>
+                <Link href={item.bookUrl} target="_blank">
+                  <Image
+                    borderLeftRadius={{base:'none', md:"lg"}}
+                    h={{base: '40vh', md: '50vh'}}
+                    src={item.bookImage}
+                    alt={item.title}
+                  />
+                </Link>
+              </Flex>
+              <Box
+                flex={1}
+                key={item.id}
+                mb={1}
+                p={3}
+                w={{ base: "100%", md: "50%" }}
+              >
+                <Link
+                  href={item.bookUrl}
+                  _hover={{ textDecoration: "none" }}
+                  target="_blank"
+                >
+                  <Heading size={"md"} _hover={{ color: "gray.600" }}>{item.title}</Heading>
+                </Link>
+                <Text>{item.description}</Text>
+                <Text fontSize="sm" color="gray.500">
+                  {item.contributor}
+                </Text>
+              </Box>
+            </Flex>
+          </Stack>
         ))}
       </Flex>
+      <Footer />
     </>
   );
 };
