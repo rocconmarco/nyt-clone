@@ -71,7 +71,7 @@ const MembersPage = () => {
                 direction={{ base: "column", md: "row" }}
                 borderWidth={"1px"}
                 borderRadius={"lg"}
-                maxW={{ base: "100vw", md: "70vw" }}
+                maxW={{ base: "100vw", lg:"70vw", xl: "60vw" }}
               >
                 <Flex flexDir={{ base: "column", md: "row" }}>
                   <Box>
@@ -136,7 +136,7 @@ const MembersPage = () => {
                     <Link href={item.bookUrl} target="_blank">
                       <Image
                         borderLeftRadius={{ base: "none", md: "lg" }}
-                        h={{ base: "40vh", md: "50vh" }}
+                        h={{ base: "40vh", lg: "50vh"}}
                         src={item.bookImage}
                         alt={item.title}
                       />

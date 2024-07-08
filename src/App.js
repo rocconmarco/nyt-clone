@@ -4,8 +4,7 @@ import AuthPage from "./pages/views/features/AuthPage";
 import MembersPage from "./pages/views/features/MembersPage";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase/firebase";
-import useSavedItemsStore from "./store/savedItemsStore";
-import { useEffect } from "react";
+import About from "./pages/views/features/About";
 
 function App() {
   const [authUser] = useAuthState(auth)
@@ -22,6 +21,9 @@ function App() {
           path="/members"
           element={authUser ? <MembersPage /> : <Navigate to="/auth" />}
         />
+        <Route
+        path="/about"
+        element={<About />} />
       </Routes>
     </>
   );
