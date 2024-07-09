@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Button, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { FaUser } from "react-icons/fa";
 import logo from "../../img/nyt-logo.png";

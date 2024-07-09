@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { auth, firestore } from "../firebase/firebase";
-import { doc, getDoc, onSnapshot } from "firebase/firestore";
+import { doc, onSnapshot } from "firebase/firestore";
 
 const useSavedItemsStore = create((set) => ({
   savedArticles: [],

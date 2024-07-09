@@ -1,7 +1,5 @@
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import {
-  Alert,
-  AlertIcon,
   Box,
   Button,
   Input,

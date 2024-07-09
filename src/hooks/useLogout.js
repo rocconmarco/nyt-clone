@@ -1,4 +1,3 @@
-import React from 'react'
 import { useSignOut } from 'react-firebase-hooks/auth'
 import { auth } from '../firebase/firebase'
 import useShowToast from './useShowToast'
