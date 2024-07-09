@@ -22,7 +22,7 @@ const About = () => {
             external APIs in a React project. In order to add more pages to my
             SPA (Single Page Application), I also decided to implement the
             authentication feature with a reserved area for the user, as well as
-            providing the opportunity to saved articles and books the user
+            providing the opportunity to save articles and books the user
             liked, for future reference and consultation.
           </Text>
           <Text>

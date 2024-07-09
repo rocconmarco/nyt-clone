@@ -3,13 +3,21 @@ import { Flex, Box, Image, Text, Heading, Link, Stack } from "@chakra-ui/react";
 import { auth, firestore } from "../../firebase/firebase";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import useSavedItemsStore from "../../store/savedItemsStore";
-import { arrayUnion, doc, updateDoc } from "firebase/firestore";
+import {
+  arrayRemove,
+  arrayUnion,
+  doc,
+  updateDoc,
+} from "firebase/firestore";
 import { nanoid } from "nanoid";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const ArticleCard = ({ article, imageUrl, imageCredits, savedArticles }) => {
   const [authUser] = useAuthState(auth);
   const addSavedArticle = useSavedItemsStore((state) => state.addSavedArticle);
+  const removeSavedArticle = useSavedItemsStore(
+    (state) => state.removeSavedArticle
+  );
 
   const isArticleSaved = savedArticles.some(
     (savedArticle) => savedArticle.title === article.title
@@ -19,20 +27,31 @@ const ArticleCard = ({ article, imageUrl, imageCredits, savedArticles }) => {
     e.preventDefault();
     const user = auth.currentUser;
     if (user) {
-      const newArticle = {
-        id: nanoid(),
-        title: article.title,
-        description: article.abstract,
-        author: article.byline,
-        imageUrl: imageUrl,
-        url: article.url,
-      };
-      addSavedArticle(newArticle);
-
       const userDocRef = doc(firestore, "users", user.uid);
-      await updateDoc(userDocRef, {
-        savedArticles: arrayUnion(newArticle),
-      });
+      if (isArticleSaved) {
+        const savedArticle = savedArticles.find(
+          (a) => a.title === article.title
+        );
+        if (savedArticle) {
+          removeSavedArticle(article.title);
+          await updateDoc(userDocRef, {
+            savedArticles: arrayRemove(savedArticle),
+          });
+        }
+      } else {
+        const newArticle = {
+          id: nanoid(),
+          title: article.title,
+          description: article.abstract,
+          author: article.byline,
+          imageUrl: imageUrl,
+          url: article.url,
+        };
+        addSavedArticle(newArticle);
+        await updateDoc(userDocRef, {
+          savedArticles: arrayUnion(newArticle),
+        });
+      }
     }
   };
 
@@ -92,7 +111,13 @@ const ArticleCard = ({ article, imageUrl, imageCredits, savedArticles }) => {
         >
           <Image src={imageUrl} alignSelf={"end"} w={"100%"} />
         </Link>
-        <Text textAlign={"end"} fontSize={{ base: "sm" }} color={"gray"} mt={2}>
+        <Text
+          textAlign={"end"}
+          fontSize={{ base: "sm" }}
+          color={"gray"}
+          mt={2}
+          display={{ base: "none", md: "block" }}
+        >
           {imageCredits}
         </Text>
       </Flex>

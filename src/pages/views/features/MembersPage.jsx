@@ -3,7 +3,7 @@ import Header from "../../../components/Header/Header";
 import Footer from "../../../components/Footer/Footer";
 import useSavedItemsStore from "../../../store/savedItemsStore";
 import { auth, firestore } from "../../../firebase/firebase";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc, arrayRemove } from "firebase/firestore";
 import {
   Box,
   Flex,
@@ -13,7 +13,14 @@ import {
   Image,
   Link,
   Stack,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  IconButton,
 } from "@chakra-ui/react";
+import { DeleteIcon } from "@chakra-ui/icons";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 const MembersPage = () => {
   const [loading, setLoading] = useState(true);
@@ -26,6 +33,45 @@ const MembersPage = () => {
 
   const reversedSavedArticles = [...savedArticles].reverse();
   const reversedSavedBooks = [...savedBooks].reverse();
+
+  const removeSavedArticle = useSavedItemsStore(
+    (state) => state.removeSavedArticle
+  );
+  const removeSavedBook = useSavedItemsStore((state) => state.removeSavedBook);
+
+  const handleRemoveArticle = async (article) => {
+    const user = auth.currentUser;
+    if (user) {
+      removeSavedArticle(article.title);
+      const userDocRef = doc(firestore, "users", user.uid);
+      await updateDoc(userDocRef, {
+        savedArticles: arrayRemove(article),
+      });
+
+      const updatedDoc = await getDoc(userDocRef);
+      if (updatedDoc.exists()) {
+        const data = updatedDoc.data();
+        setSavedArticles(data.savedArticles || []);
+      }
+    }
+  };
+
+  const handleRemoveBook = async (book) => {
+    const user = auth.currentUser;
+    if (user) {
+      removeSavedBook(book.title);
+      const userDocRef = doc(firestore, "users", user.uid);
+      await updateDoc(userDocRef, {
+        savedBooks: arrayRemove(book),
+      });
+
+      const updatedDoc = await getDoc(userDocRef);
+      if (updatedDoc.exists()) {
+        const data = updatedDoc.data();
+        setSavedBooks(data.savedBooks || []);
+      }
+    }
+  };
 
   useEffect(() => {
     const loadSavedItems = async () => {
@@ -47,7 +93,9 @@ const MembersPage = () => {
   return (
     <>
       <Header />
-      {loading ? <Spinner mt={3} mx={{ base: "5", md: "10" }} size="xl" /> : null}
+      {loading ? (
+        <Spinner mt={3} mx={{ base: "5", md: "10" }} size="xl" />
+      ) : null}
       <Flex
         mt={3}
         mb={8}
@@ -72,7 +120,7 @@ const MembersPage = () => {
                 direction={{ base: "column", md: "row" }}
                 borderWidth={"1px"}
                 borderRadius={"lg"}
-                maxW={{ base: "100vw", lg:"70vw", xl: "60vw" }}
+                maxW={{ base: "100vw", lg: "70vw", xl: "60vw" }}
               >
                 <Flex flexDir={{ base: "column", md: "row" }}>
                   <Box>
@@ -100,7 +148,7 @@ const MembersPage = () => {
                       _hover={{ textDecoration: "none" }}
                       target="_blank"
                     >
-                      <Heading size={"md"} _hover={{ color: "gray.600" }}>
+                      <Heading size={"md"} _hover={{ color: "gray.600" }} mb={2}>
                         {item.title}
                       </Heading>
                     </Link>
@@ -108,6 +156,25 @@ const MembersPage = () => {
                     <Text fontSize="sm" color="gray.500">
                       {item.author}
                     </Text>
+                  </Box>
+                  <Box py={{ base: 1, md: 3 }}>
+                    <Menu>
+                      <MenuButton
+                        as={IconButton}
+                        aria-label="Options"
+                        icon={<HiOutlineDotsHorizontal />}
+                        variant="link"
+                        color={"black"}
+                      />
+                      <MenuList placement="bottom-end">
+                        <MenuItem
+                          icon={<DeleteIcon />}
+                          onClick={() => handleRemoveArticle(item)}
+                        >
+                          Delete article
+                        </MenuItem>
+                      </MenuList>
+                    </Menu>
                   </Box>
                 </Flex>
               </Stack>
@@ -137,7 +204,7 @@ const MembersPage = () => {
                     <Link href={item.bookUrl} target="_blank">
                       <Image
                         borderLeftRadius={{ base: "none", md: "lg" }}
-                        h={{ base: "40vh", lg: "50vh"}}
+                        h={{ base: "40vh", lg: "50vh" }}
                         src={item.bookImage}
                         alt={item.title}
                       />
@@ -163,6 +230,25 @@ const MembersPage = () => {
                     <Text fontSize="sm" color="gray.500">
                       {item.contributor}
                     </Text>
+                  </Box>
+                  <Box py={{ base: 1, md: 3 }}>
+                    <Menu>
+                      <MenuButton
+                        as={IconButton}
+                        aria-label="Options"
+                        icon={<HiOutlineDotsHorizontal />}
+                        variant="link"
+                        color={"black"}
+                      />
+                      <MenuList>
+                        <MenuItem
+                          icon={<DeleteIcon />}
+                          onClick={() => handleRemoveBook(item)}
+                        >
+                          Delete book
+                        </MenuItem>
+                      </MenuList>
+                    </Menu>
                   </Box>
                 </Flex>
               </Stack>

@@ -5,7 +5,7 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import useSavedItemsStore from "../../store/savedItemsStore";
 import { auth, firestore } from "../../firebase/firebase";
 import { nanoid } from "nanoid";
-import { arrayUnion, doc, updateDoc } from "firebase/firestore";
+import { arrayRemove, arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const BookCard = ({
@@ -19,6 +19,7 @@ const BookCard = ({
 }) => {
   const [authUser] = useAuthState(auth);
   const addSavedBook = useSavedItemsStore((state) => state.addSavedBook);
+  const removeSavedBook = useSavedItemsStore((state) => state.removeSavedBook);
 
   const isSavedBook = savedBooks.some((savedBook) => savedBook.title === title);
 
@@ -26,20 +27,31 @@ const BookCard = ({
     e.preventDefault();
     const user = auth.currentUser;
     if (user) {
-      const newBook = {
-        id: nanoid(),
-        title: title,
-        description: description,
-        bookImage: bookImage,
-        contributor: contributor,
-        bookUrl: bookUrl,
-      };
-      addSavedBook(newBook);
-
       const userDocRef = doc(firestore, "users", user.uid);
-      await updateDoc(userDocRef, {
-        savedBooks: arrayUnion(newBook),
-      });
+      if (isSavedBook) {
+        const savedBook = savedBooks.find(
+          (book) => book.title === title
+        );
+        if (savedBook) {
+          removeSavedBook(title);
+          await updateDoc(userDocRef, {
+            savedBooks: arrayRemove(savedBook),
+          });
+        }
+      } else {
+        const newBook = {
+          id: nanoid(),
+          title: title,
+          description: description,
+          bookImage: bookImage,
+          contributor: contributor,
+          bookUrl: bookUrl,
+        };
+        addSavedBook(newBook);
+        await updateDoc(userDocRef, {
+          savedBooks: arrayUnion(newBook),
+        });
+      }
     }
   };
 
