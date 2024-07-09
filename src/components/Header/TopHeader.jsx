@@ -7,21 +7,46 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useAuthStore from "../../store/authStore";
 
 const TopHeader = () => {
-  const navigate = useNavigate()
-  const location = useLocation()
+  const navigate = useNavigate();
+  const location = useLocation();
   const authUser = useAuthStore((state) => state.user);
   return (
     <>
-      <LeftSideDrawer />
-      <Image src={logo} h={{base: '42px', md:'48px', lg:'76px'}} cursor={'pointer'} 
-      onClick={location.pathname !== "/" ? () => navigate("/") : () => window.location.reload()}></Image>
-      <Flex flexDir={'column'} alignItems={'center'} gap={1}>
-      <Button variant={'link'} textDecoration={'none'} onClick={authUser ? () => navigate("/members") : () => navigate("/auth") }>
-        <FaUser color="black" />
-      </Button>
-      <Text display={{base: 'none', md: 'block'}}>{authUser ? `${authUser.firstName} ${authUser.lastName}` : null}</Text>
+      <Flex width={"100%"} justify={"space-between"} align={"center"}>
+        <Flex flex={1} justify={"flex-start"}>
+          <LeftSideDrawer />
+        </Flex>
+
+        <Flex flex={1} justify={'center'}>
+          <Image
+            src={logo}
+            h={{ base: "42px", md: "48px", lg: "76px" }}
+            w="auto"
+            objectFit="contain"
+            cursor={"pointer"}
+            onClick={
+              location.pathname !== "/"
+                ? () => navigate("/")
+                : () => window.location.reload()
+            }
+          />
+        </Flex>
+
+        <Flex flex={1} justify={'flex-end'} alignItems={"center"} gap={1}>
+          <Button
+            variant={"link"}
+            textDecoration={"none"}
+            onClick={
+              authUser ? () => navigate("/members") : () => navigate("/auth")
+            }
+          >
+            <FaUser color="black" />
+          </Button>
+          <Text display={{ base: "none", md: "block" }}>
+            {authUser ? `${authUser.firstName} ${authUser.lastName}` : null}
+          </Text>
+        </Flex>
       </Flex>
-      
     </>
   );
 };

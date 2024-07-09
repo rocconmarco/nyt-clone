@@ -1,9 +1,11 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import TopHeader from "./TopHeader";
 import BottomHeader from "./BottomHeader";
+import useAuthStore from "../../store/authStore";
 
 const Header = () => {
+  const authUser = useAuthStore((state) => state.user);
   return (
     <Flex as={"header"} flexDir={"column"} mx={{base:'5', md:'10'}}>
       <Flex
@@ -15,6 +17,7 @@ const Header = () => {
       >
         <TopHeader />
       </Flex>
+      
       <Flex
         align={"center"}
         justify={"center"}
