@@ -15,7 +15,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-  const { loading, error, login } = useLogin();
+  const { loading, login } = useLogin();
   const [showPassword, setShowPassword] = useState(false);
   return (
     <>

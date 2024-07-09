@@ -19,7 +19,7 @@ const Signup = () => {
   });
   const [showPassword, setShowPassword] = useState(false);
 
-  const { loading, error, signup } = useSignUpWithEmailAndPassword();
+  const { loading, signup } = useSignUpWithEmailAndPassword();
   return (
     <>
       <Box>
