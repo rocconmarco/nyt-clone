@@ -30,6 +30,11 @@ const useSignUpWithEmailAndPassword = () => {
         return
     }
 
+    if(inputs.password.length < 6) {
+      showToast("Error", "Please choose a longer password.", "error")
+        return
+    }
+
     try {
       const newUser = await createUserWithEmailAndPassword(
         inputs.email,

@@ -82,15 +82,9 @@ const Signup = () => {
             </Button>
           </InputRightElement>
         </InputGroup>
-        {error && (
-          <Alert status="error" fontSize={13} p={2} borderRadius={4}>
-            <AlertIcon fontSize={12} />
-            {error.message}
-          </Alert>
-        )}
-        
+        <Text as={'i'} pb={1} fontSize={'12px'}>The password must be at least 6 characters long.</Text>
       </Box>
-     
+
       <Button
         w={350}
         color="white"
