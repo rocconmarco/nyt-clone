@@ -1,15 +1,12 @@
 import {
   Box,
-  Button,
   Flex,
   Image,
-  Input,
   Text,
   VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import logo from "../../img/nyt-logo.png";
-import { FcGoogle } from "react-icons/fc";
 import Login from "./Login";
 import Signup from "./Signup";
 import { useNavigate } from "react-router-dom";

@@ -8,7 +8,6 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  Flex,
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";

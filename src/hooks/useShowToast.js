@@ -1,5 +1,4 @@
 import { useToast } from "@chakra-ui/react";
-import React from "react";
 
 const useShowToast = () => {
   const toast = useToast();
