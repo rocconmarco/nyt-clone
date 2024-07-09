@@ -5,26 +5,27 @@ import MembersPage from "./pages/views/features/MembersPage";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase/firebase";
 import About from "./pages/views/features/About";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
-  const [authUser] = useAuthState(auth)
+  const [authUser] = useAuthState(auth);
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route
-          path="/auth"
-          element={!authUser ? <AuthPage /> : <Navigate to="/members" />}
-        />
-        <Route
-          path="/members"
-          element={authUser ? <MembersPage /> : <Navigate to="/auth" />}
-        />
-        <Route
-        path="/about"
-        element={<About />} />
-      </Routes>
+      <HelmetProvider>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/auth"
+            element={!authUser ? <AuthPage /> : <Navigate to="/members" />}
+          />
+          <Route
+            path="/members"
+            element={authUser ? <MembersPage /> : <Navigate to="/auth" />}
+          />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </HelmetProvider>
     </>
   );
 }

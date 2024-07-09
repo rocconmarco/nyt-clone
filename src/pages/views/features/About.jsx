@@ -2,10 +2,14 @@ import React from "react";
 import Header from "../../../components/Header/Header";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Footer from "../../../components/Footer/Footer";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <>
+    <Helmet>
+        <title>About - The New York Clone</title>
+    </Helmet>
       <Header />
       <Flex flexDir={"column"} mt={3} mx={{ base: "5", md: "10" }}>
         <Heading as={"h1"}>About</Heading>

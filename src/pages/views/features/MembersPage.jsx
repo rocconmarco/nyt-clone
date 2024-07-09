@@ -21,6 +21,7 @@ import {
 } from "@chakra-ui/react";
 import { DeleteIcon } from "@chakra-ui/icons";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { Helmet } from "react-helmet-async";
 
 const MembersPage = () => {
   const [loading, setLoading] = useState(true);
@@ -92,6 +93,9 @@ const MembersPage = () => {
 
   return (
     <>
+    <Helmet>
+        <title>Members - The New York Clone</title>
+    </Helmet>
       <Header />
       {loading ? (
         <Spinner mt={3} mx={{ base: "5", md: "10" }} size="xl" />

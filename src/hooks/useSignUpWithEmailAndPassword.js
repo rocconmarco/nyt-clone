@@ -25,6 +25,13 @@ const useSignUpWithEmailAndPassword = () => {
     const q = query(usersRef, where("email", "==", inputs.email))
     const querySnapshot = await getDocs(q)
 
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!regex.test(inputs.email)){
+      showToast("Error", "Incorrect email format.", "error")
+      return
+    }
+
     if(!querySnapshot.empty){
         showToast("Error", "Email already in use.", "error")
         return
