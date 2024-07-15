@@ -16,8 +16,6 @@
 
 ## About The Project
 
-<br>
-
 The New York Clone, as the name suggests, is a clone website of the popular newspaper “The New York Times”. The website has been created as part of the React course within the Master in Blockchain Development provided by start2impact university.
 
 <br>
@@ -32,6 +30,7 @@ The authentication feature has been implemented via firebase, the renowned BaaS 
 
 Feel free to explore the website, to acquire prime quality knowledge provided by the NYT and to contact me through my social media channels at the bottom of the page.
 
+<br>
 
 ## Contact
 
