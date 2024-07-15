@@ -1,7 +1,7 @@
 <br />
 <div id="readme-top" align="center">
   <a href="https://countitup.netlify.app">
-    <img src="src/img/nyt-logo.png" alt="Logo" width="600" height="100">
+    <img src="src/img/nyt-logo.png" alt="Logo" width="500" height="100">
   </a>
 
 <h3 align="center">The New York Clone</h3>
