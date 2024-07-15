@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+<br />
+<div id="readme-top" align="center">
+  <a href="https://countitup.netlify.app">
+    <img src="src/img/nyt-logo" alt="Logo" width="400" height="100">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">The New York Clone</h3>
 
-## Available Scripts
+  <p align="center">
+    Clone of the New York Times website for educational purposes.
+    <br />
+    <a href="https://github.com/rocconmarco/nyt-clone"><strong>Repository GitHub »</strong></a>
+    <br />
+  </p>
+</div>
 
-In the project directory, you can run:
+## About The Project
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The New York Clone, as the name suggests, is a clone website of the popular newspaper “The New York Times”. The website has been created as part of the React course within the Master in Blockchain Development provided by start2impact university.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
+The main purpose of this website is to demonstrate the skills I have acquired during this course. I learned how to properly integrate external APIs in a React project. In order to add more pages to my SPA (Single Page Application), I also decided to implement the authentication feature with a reserved area for the user, as well as providing the opportunity to save articles and books the user liked, for future reference and consultation.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+The authentication feature has been implemented via firebase, the renowned BaaS (Back-end as a Service) freely provided by Google. The global state is maintained by Zustand, so that the user interface remain coherent for logged-in users, and differs from the public version of the website for non-authenticated users.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Feel free to explore the website, to acquire prime quality knowledge provided by the NYT and to contact me through my social media channels at the bottom of the page.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run eject`
+<!-- CONTACT -->
+## Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<b>Marco Roccon - Digital Innovation & Development</b><br>
+Portfolio website: https://rocconmarco.github.io/<br>
+Linkedin: https://www.linkedin.com/in/marcoroccon/<br>
+GitHub: https://github.com/rocconmarco
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Project Link: https://thenewyorkclone.netlify.app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Copyright
 
-## Learn More
+© 2024 Marco Roccon. Tutti i diritti riservati.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
