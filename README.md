@@ -32,9 +32,7 @@ The authentication feature has been implemented via firebase, the renowned BaaS 
 
 Feel free to explore the website, to acquire prime quality knowledge provided by the NYT and to contact me through my social media channels at the bottom of the page.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTACT -->
 ## Contact
 
 <b>Marco Roccon - Digital Innovation & Development</b><br>
@@ -44,10 +42,8 @@ GitHub: https://github.com/rocconmarco
 
 Project Link: https://thenewyorkclone.netlify.app
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Copyright
 
 © 2024 Marco Roccon. Tutti i diritti riservati.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
