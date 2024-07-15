@@ -41,6 +41,7 @@ GitHub: https://github.com/rocconmarco
 
 Project Link: https://thenewyorkclone.netlify.app
 
+<br>
 
 ## Copyright
 
